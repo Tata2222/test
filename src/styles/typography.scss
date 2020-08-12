@@ -1,0 +1,55 @@
+body {
+  color: #3e3e3e;
+}
+
+/*h1 {
+  @extend %h1;
+}*/
+
+
+
+.btn {
+  border: 2px solid $c-primary;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: $c-primary;
+  max-width: 188px;
+  width: 100%;
+  text-align: center;
+  padding: 11px 15px;
+  display: block;
+  margin: auto;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s, background 0.3s;
+  @media (max-width: $mobileBreakpoint) {
+    max-width: 280px;
+  }
+  &:hover {
+    background: $c-primary;
+    color: #fff;
+  }
+}
+
+.btn-submit {
+  background: $c-primary;
+  /*box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);*/
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid  $c-primary;
+  padding: 14px 20px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  color: #fff;
+  transition: color 0.3s, background 0.3s;
+  margin-top: 38px;
+  @media (max-width: $mobileBreakpoint) {
+    max-width: 280px;
+    margin: 25px auto;
+  }
+  &:hover {
+    background: #fff;
+    color: $c-primary;
+  }
+}
