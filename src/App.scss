@@ -1,12 +1,14 @@
 @import "./styles/main.scss";
 
 .main {
-  &__container {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 0 25px;
-  }
+ 
+}
+
+.info__container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 0 25px;
 }
 
 .header {
