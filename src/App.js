@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
+import { Modal } from './Modal';
 import './App.scss';
 
 function App() {
+  const [isMadalOpen, setModalOpen]= useState(false);
+
+  const handleSubmit = () => {
+    console.log('Submit function!');
+    setModalOpen(false);
+  }
+
+  const handleCancel = () => {
+    console.log('Cancel function!');
+    setModalOpen(false);
+  }
+ 
   return (
     <div className="App">
       <header className="header">
@@ -19,7 +32,21 @@ function App() {
      <main className="main">
       <div className="point__container">
         <img className="section__img" src="./bild.jpg" alt="" />
-        <span className="section__label">200</span>
+        <span className="section__label" onClick={() => setModalOpen(true)}>200</span>
+      <>
+  
+   
+        <Modal
+          title="Test Dialog window"
+          isOpen={isMadalOpen}
+          onCancel={() => handleCancel()}
+          onSubmit={() => handleSubmit()}
+        >
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a</p>
+        </Modal>
+
+      </>
+
       </div>
       <div className="info__container">
         <section className="section">
@@ -29,7 +56,6 @@ function App() {
           </div>
         </section>
         <section  className="section">
-        
           <form className="form section__form">
             <div className="form__checkboxPanel">
               <input type="checkbox" id="female" name="female" value="female" />
