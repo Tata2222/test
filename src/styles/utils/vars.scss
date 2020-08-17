@@ -3,8 +3,26 @@ $c-secondary: #f7f7f7;
 $c-text-dark: #161616;
 $c-text-light: #696969;
 $container-width: 1040px;
-$gutter-width: 20px/2;
+
+
 $logo-width: 115px;
 $logo-width-min: 73px;
-$tabletBreakpoint: 992px;
-$mobileBreakpoint: 767px;
+
+:root {
+  --base-white: #fff;
+  --c-active: #ef001f;
+  --c-primary: #ef001f;
+  --c-disable: #f7f7f7;
+  --c-secondary: #f7f7f7;
+  --c-text-dark: #161616;
+  --c-text-darkgray: #2b2b2b;
+  --c-text-light: #696969;
+  --c-light-element: #a0a0a0;
+  --bg-point-list: #707070;
+  --bg-empty-img: #bdbdbd;
+  --bg-attachment-btn: #e5e5e5;
+  --bg-whatsapp-btn: #46C655;
+  --border-radius: 8px;
+  --container-width: 1040px;
+  --max-mobile-container-width: 375px;
+}

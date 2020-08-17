@@ -1,0 +1,45 @@
+.progressBar {
+  display: flex;
+  justify-content: center;
+  
+  &__list {
+    display: flex;
+  }
+
+  &__separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 25px 0 15px;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 10px;
+    color: var(--c-light-element);
+
+    &_active {
+      position: relative;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--c-text-dark);
+    }
+
+    &:before, 
+    &_active:before {
+      content: "";
+      position: absolute;
+      border: 1px solid var(--c-light-element);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &_active:before {
+      border: 1.2px solid var(--c-text-dark);
+    }
+  }
+}

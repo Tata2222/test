@@ -1,0 +1,126 @@
+.form {
+  margin-bottom: 30px;
+
+  &__checkboxPanel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+
+  &__cityBlock,
+  &__phoneBlock {
+    display: flex;
+  }
+
+  &__input_sm,
+  &__input_code,
+  &__input_phone,
+  &__input {
+    border: 0;
+    background-color: var(--c-secondary);
+    padding: 10px 17px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+    line-height: 26px;
+    box-sizing: border-box;
+    margin-bottom: 14px;
+
+    &::placeholder {
+      font-size: 14px;
+      color: var(--c-text-light);
+    }
+  }
+
+  &__input_sm {
+    width: 30%;
+    margin-right: 10px;
+  }
+
+  &__input_code {
+    width: 30%;
+    border-radius: 8px 0 0 8px;
+  }
+
+  &__input_phone {
+    border-radius: 0 8px 8px 0;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="radio"] + label {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 1em 1.5em;
+    border-radius: 8px;
+    background-color: var(--c-secondary);
+    color: var(--c-light-element);
+    
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3 ease-in;
+  }
+  
+  input[type="radio"]:checked + label {
+    background-color: var(--c-primary);
+    color: var(--base-white);
+  }
+
+  &__acceptBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__acceptBlock:before {
+    content: "";
+    position: absolute;
+    width: 104px;
+    height: 1px;
+    background-color: var(--c-light-element);
+    left: 30px;
+    top: 0;
+  }
+
+  &__accept {
+    display: flex;
+    margin-top: 30px;
+  
+    input[type="checkbox"].form__acceptChecker {
+      display:none;
+    }
+
+    input[type="checkbox"].form__acceptChecker + label span {
+      display:inline-block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--c-light-element);
+      border-radius: 50%;
+
+      vertical-align: middle;
+      background:url(../styles/images/check.svg) left top no-repeat;
+      cursor:pointer;
+    }
+
+    input[type="checkbox"].form__acceptChecker:checked + label span {
+      background:url(../styles/images/check.svg) -19px top no-repeat;
+    }
+  }
+
+  &__acceptText{
+    width: 245px;
+    font-size: 12px;
+    color: var(--c-text-light);
+    margin: 0 0 30px 10px;
+  }
+}
