@@ -48,14 +48,26 @@ $border-radius: 8px;
 .modalBody,
 .modalFooter {
   padding: 0 25px;
+  box-sizing: border-box;
 }
 
 .modalHeader {
+  position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   padding-bottom: 40px;
+  overflow: hidden;
 }
+
+/*.modalHeader__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: var(--border-radius)  var(--border-radius) 0 0;
+  box-sizing: border-box;
+}*/
 
 /*.modalTitle {
   width: 200px;
@@ -275,3 +287,83 @@ $border-radius: 8px;
     background-color: var(--c-primary);
   }
 }
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+
+  &Text {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &Number {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+
+  &List {
+    display: flex;
+  }
+
+  &Item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 32px;
+    border-radius: var(--border-radius);
+    background-color: var(--c-secondary);
+    margin-right: 13px;
+
+    &:last-of-type {
+      margin-left: 0;
+    }
+
+    &.active {
+      background-color: var(--c-primary);
+    }
+
+    &.empty {
+      background-color: var(--base-white);
+      border: 1px solid var(--c-text-dark);
+    }
+  }
+
+  &Text {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 13px;
+  }
+}
+
+.changeNumber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+
+  &__text {
+    font-size: 12px;
+    font-weight: 500px;
+    color: var(--c-text-dark)
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--c-text-dark);
+    text-decoration: underline; 
+  }
+}
+  

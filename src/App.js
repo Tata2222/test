@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { ModalRegister } from './ModalRegister';
+import { ModalVerification } from './ModalVerification';
 import { FillCheckCycle, Check, Line, RightArrow } from "./styles/icons/SvgSprite";
 import { CV } from './pages/CV';
+import Button from './components/Button';
 import './App.scss';
 
 
@@ -132,11 +133,12 @@ function App() {
     </>
     : <CV />}
 
+    <Button type="submit" className="btnPrimary">Btn<span className="btn__icon"><RightArrow /></span></Button>
     <button onClick={()=>setPageName('CV')}>CV</button>
     
-    <ModalRegister onCancel={() => setIsModalOpen(false)}   isOpen={isModalOpen}>
+    <ModalVerification onCancel={() => setIsModalOpen(false)} isOpen={isModalOpen}>
       
-    </ModalRegister>
+    </ModalVerification>
        
     </div>
   );
