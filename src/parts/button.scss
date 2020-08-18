@@ -14,10 +14,18 @@
     color: var(--c-text-light);
     transition: all 0.3s ease;
     margin: auto;
+    svg {
+      color: var(--c-icon-secondary);
+    }
 
     &:active,
     &:hover {
       color: var(--c-primary);
+
+      svg {
+        fill: var(--c-primary);
+      }
+
     }
   }
 
@@ -37,9 +45,18 @@
     transition: all 0.3s ease;
     margin: auto;
 
+    svg {
+      fill: var(--base-white);
+    }
+
     &:active,
     &:hover {
-      color: var(--c-secondary);
+      color: var(--c-primary);
+      background: var(--base-wight);
+
+      svg {
+        fill: var(--c-primary);
+      }
     }
   }
 
@@ -99,6 +116,85 @@
 
   &:active,
   &:hover {
+    color: var(--bg-whatsapp-btn);
+    background: var(--base-white);
+
+    svg {
+      fill: var(--bg-whatsapp-btn);
+    }
+  }
+}
+
+.btnLoginGoogle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--baze-white);
+  border-radius: 30px;
+  border: 1px solid  var(--c-google-btn);
+  width: 120px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var( --c-google-btn);
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+
+  &:active,
+  &:hover {
     color: var(--c-primary);
   }
+}
+
+.btnLoginFacebook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--c-facebook-btn);
+  border-radius: 30px;
+  border: 1px solid  var(--c-facebook-btn);
+  width: 120px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var( --base-white);
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  margin-left: 10px;
+
+  &:active,
+  &:hover {
+    color: var(--c-primary);
+  }
+}
+
+
+
+.btnLivechat,
+.btnWhatsAppRound,
+.btnTelephone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.btnTelephone {
+  background: var(--baze-white);
+  border: 1px solid  var(--c-google-btn);
+}
+
+.btnWhatsAppRound {
+  background: var(--c-success);
+  border: 1px solid  var(--c-success);
+}
+
+.btnLivechat {
+  background: var(--c-facebook-btn);
+  border: 1px solid  var(--c-facebook-btn);
 }

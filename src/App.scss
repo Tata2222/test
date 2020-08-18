@@ -10,6 +10,8 @@
 @import "./parts/profile.scss";
 @import "./parts/slider.scss";
 @import "./parts/feedback.scss";
+@import "./parts/password.scss";
+@import "./parts/phoneApp.scss";
 
 
 .container {
@@ -112,7 +114,35 @@ box-sizing: border-box;
     margin-bottom: 50px;
   }
 
+ 
   &__form_contacts {
+    margin-top: 40px;
     margin-bottom: 60px;
   }
+
+  &__phoneAppPanel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 15px;
+    
+  }
+
+  &__textPrimary {
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+}
+
+.advantage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.buttonPanel {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 30px;
+  margin-bottom: 40px;
 }

@@ -50,17 +50,15 @@ export const ModalVerification = ({
                   <p className="changeNumber__text">Not the correct number?</p>
                   <a href="./" className="changeNumber__link">Change number now</a>
                 </div> 
-           
-                <div className="dots">
-                  <span className="dots__item_active"></span>
-                  <span className="dots__item"></span>
-                  <span className="dots__item"></span>
-                </div>
+               
               </div>
               <div className="modalFooter">
-                <button onClick={onCancel} invert>Cancel</button>
-                <button onClick={onSubmit}>Submit</button>
-              </div>
+                  <div className="dots">
+                    <span className="dots__item_active"></span>
+                    <span className="dots__item"></span>
+                    <span className="dots__item"></span>
+                  </div>
+                </div>
             </div>
           </div>
         </Portal>

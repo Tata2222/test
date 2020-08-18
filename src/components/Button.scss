@@ -72,6 +72,7 @@
     color: var(--base-white);
     transition: all 0.3s ease;
     margin: auto;
+
     svg {
       fill: var(--base-white);
     }
@@ -137,6 +138,48 @@
   height: 60px;
   color: var(--base-white);
   transition: all 0.3s ease;
+
+  &:active,
+  &:hover {
+    color: var(--c-primary);
+  }
+}
+
+.btnLoginGoogle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--baze-white);
+  border-radius: 30px;
+  border: 1px solid  var(--c-google-btn);
+  width: 120px;
+  height: 40px;
+  font-size: 18px;
+  color: var( --c-google-btn);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:active,
+  &:hover {
+    color: var(--c-primary);
+  }
+}
+
+.btnLoginFacebook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--c-facebook-btn);
+  border-radius: 30px;
+  border: 1px solid  var(--c-facebook-btn);
+  width: 120px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var( --base-white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
 
   &:active,
   &:hover {

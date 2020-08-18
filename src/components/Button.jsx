@@ -19,7 +19,7 @@ const Button = ({
 
   return (
     <Tag
-      className={classNames(className, {[active]: active})}
+      className={classNames(className)}
       disabled={disabled}
       onClick={onClickAction}
       {...attrs}
