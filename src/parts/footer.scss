@@ -16,7 +16,8 @@
 
   &__profit {
     display: flex;
-    margin-bottom: 20px; 
+    width: max-content;
+    margin: 0 auto 20px;
   }
 
   &__profitItem {
@@ -27,7 +28,7 @@
     height: 14px;
 
     &Icon {
-      height: 100%;
+      /*height: 100%;*/
       margin-right: 5px;
     }
   }

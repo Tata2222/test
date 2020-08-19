@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ModalContact } from './ModalContact';
-import { FillCheckCycle, Check, Line, RightArrow } from "./styles/icons/SvgSprite";
+import { ModalChanel } from './ModalChanel';
+import { FillCheckCycle, Check, Line, RightArrow, ChevronDown } from "./styles/icons/SvgSprite";
 import { CV } from './pages/CV';
 import Button from './components/Button';
 import './App.scss';
@@ -8,7 +8,8 @@ import './App.scss';
 
 function App() {
   const [isModalOpen, setIsModalOpen]= useState(false);
-  const [pageName, setPageName] = useState('Information')
+  const [pageName, setPageName] = useState('Information');
+  const [isTrackOpen, setTrackOpen]= useState(false);
 
   console.log(isModalOpen)
  
@@ -31,9 +32,8 @@ function App() {
         </div>
       </header>
 
-
      <main className="main">
-     <div className="section__company">
+      <div className="section__company">
         <div className="company__proposition">
           <img className="company__logo" src="./images/proSiebenSat_logo.svg" alt="logo"/>
           <div className="company__vacancy">Praktikant (m/w/d) Corporate Controlling</div>
@@ -71,7 +71,7 @@ function App() {
             </select>
             <input className="form__input" type="tell" name="phone" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
             <input className="form__input" type="email" name="email" placeholder="E-mail" required />
-            <div className="track">
+            <div className={isTrackOpen?"track":"track_disabled"}>
               <img className="track__img" src="./images/man_with_earphones.jpg" alt="img" />
               <div className="track__pointBlock">
                 <div className="points">
@@ -81,7 +81,7 @@ function App() {
                   </span>
                   <span className="points__text">Track your application</span>
                 </div>
-                <span className="track__arrow" />
+                <button className="track__arrow" onClick={()=>setTrackOpen(!isTrackOpen)}><ChevronDown /></button>
               </div>
               <div className="track__info">
                 <div className="track__infoText">
@@ -133,12 +133,12 @@ function App() {
     </>
     : <CV />}
 
-    <Button type="submit" className="btnPrimary">Btn<span className="btn__icon"><RightArrow /></span></Button>
+    <Button type="submit" className="btnEmail">Btn<span className="btn__icon"><RightArrow /></span></Button>
     <button onClick={()=>setPageName('CV')}>CV</button>
     
-    <ModalContact onCancel={() => setIsModalOpen(false)} isOpen={isModalOpen}>
+    <ModalChanel onCancel={() => setIsModalOpen(false)} isOpen={isModalOpen}>
       
-    </ModalContact>
+    </ModalChanel>
        
     </div>
   );

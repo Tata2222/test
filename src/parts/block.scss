@@ -1,0 +1,69 @@
+.block {
+
+  &_WhatsApp {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    height: 296px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    background-color: var(--bg-whatsapp-btn);
+    padding: 0 40px;
+    margin-top: -30px;
+  }
+
+  &__textPrimary {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--base-white);
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+    &_lg {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--base-white);
+      margin-top: 40px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__back {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+    &Text {
+      font-size: 12px;
+      line-height: 1.2;
+      color: var(--base-white);
+    }
+
+    &Number {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--base-white);
+    }
+  }
+
+  &__textAccept {
+    font-size: 8px;
+    color: var(--base-white);
+    margin: auto;
+  }
+}
+
+.blockAccept {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 225px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  background-color: var(--c-telegram-btn);
+  padding: 0 40px;
+  margin-top: -30px;
+}

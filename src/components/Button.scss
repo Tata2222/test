@@ -124,6 +124,10 @@
   }
 }
 
+.btnDiscard,
+.btnEmail,
+.btnSms,
+.btnTelegram,
 .btnWhatsApp {
   display: flex;
   justify-content: space-between;
@@ -139,9 +143,77 @@
   color: var(--base-white);
   transition: all 0.3s ease;
 
+  svg {
+    fill: var(--base-white);
+  }
+
   &:active,
   &:hover {
     color: var(--c-primary);
+
+    svg {
+      fill: var(--bg-whatsapp-btn);
+    }
+  }
+}
+
+.btnTelegram {
+  background: var(--c-telegram-btn);
+  border: 1px solid var(--c-telegram-btn);
+
+  &:active,
+  &:hover {
+    background: var(--base-white);
+    color: var(--c-telegram-btn);
+
+    svg {
+      fill: var(--c-telegram-btn);
+    }
+  }
+}
+
+.btnSms {
+  background: var(--c-sms-btn);
+  border: 1px solid var(--c-sms-btn);
+
+  &:active,
+  &:hover {
+    background: var(--base-white);
+    color: var(--c-sms-btn);
+
+    svg {
+      fill: var(--c-sms-btn);
+    }
+  }
+}
+
+.btnDiscard {
+  background: var(--c-discard-btn);
+  border: 1px solid var(--c-discard-btn);
+
+  &:active,
+  &:hover {
+    background: var(--base-white);
+    color: var(--c-discard-btn);
+
+    svg {
+      fill: var(--c-discard-btn);
+    }
+  }
+}
+
+.btnEmail {
+  background: var(--c-email-btn);
+  border: 1px solid var(--c-email-btn);
+
+  &:active,
+  &:hover {
+    background: var(--base-white);
+    color: var(--c-email-btn);
+
+    svg {
+      fill: var(--c-email-btn);
+    }
   }
 }
 
@@ -185,4 +257,8 @@
   &:hover {
     color: var(--c-primary);
   }
+}
+
+.btnTelegram {
+
 }
