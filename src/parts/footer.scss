@@ -42,3 +42,23 @@
     margin-right: 10px;
   }
 }
+
+
+.profit {
+  display: flex;
+  width: max-content;
+  margin: 0 auto 20px;
+
+  &Item {
+    margin-right: 10px; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 14px;
+
+    &Icon {
+      /*height: 100%;*/
+      margin-right: 5px;
+    }
+  }
+}

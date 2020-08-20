@@ -1,35 +1,17 @@
 import React from 'react';
-import { FillCheckCycle, Check, Line, RightArrow } from "../styles/icons/SvgSprite";
+import { FillCheckCycle, Check, RightArrow } from "../styles/icons/SvgSprite";
 
-
-export const Summary = () => {
+const Summary = () => {
   return (
     <>
-      <header className="header">
-       <div className="header header__container">
-
-         <div className="header progressBar">
-            <ul className="progressBar__list">
-              <li className="progressBar__item_active">Information</li>
-              <span className="progressBar__separator"><Line /></span>
-              <li className="progressBar__item">CV</li>
-              <span className="progressBar__separator"><Line /></span>
-              <li className="progressBar__item">Application</li>
-            </ul>
-          </div>
+      <div className="section__quality">
+        <div className="modalCheckBox">
+          <input type="checkbox" id="checker"/>
+          <label for="checker"></label>
         </div>
-      </header>
-
-
-     <main className="main">
-        <div className="section__quality">
-          <div className="modalCheckBox">
-            <input type="checkbox" id="checker"/>
-            <label for="checker"></label>
-          </div>
-          <p className="modalNote">Average other applications: 500Pº</p>
-        </div>
-        
+        <p className="modalNote">Average other applications: 500Pº</p>
+      </div>
+      
       <div className="section__company">
         <div className="company__imgWrapper">
           <img className="company__img" src="./images/mountain_woman.jpg" alt="company_image" />
@@ -86,21 +68,8 @@ export const Summary = () => {
           <p className="cv__finishLater">Finish later</p>
         </section>
       </div>
-     </main>
-
-     <footer className="footer">
-      <div className="footer__text">Do you need help?</div>
-      <div className="footer__profit">
-        <span className="footer__profitItem"><span className="footer__profitItemIcon"><Check /></span> 100%</span>
-        <span className="footer__profitItem"><span className="footer__profitItemIcon"><Check /></span> no Ads</span>
-        <span className="footer__profitItem"><span className="footer__profitItemIcon"><Check /></span> super secure</span>
-      </div>
-      <div className="footer__imprintBlock">
-        <span className="footer__imprint">Imprint</span>
-        {/* <select></select> */}
-      </div>
-
-    </footer>
     </>
   )
 }
+
+export default Summary;

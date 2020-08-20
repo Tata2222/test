@@ -4,7 +4,7 @@ import { FillCheckCycle, Check, RightArrow } from "./styles/icons/SvgSprite";
 
 import './Modal.scss';
 
-export const Modal = ({
+export const ModalPoint = ({
   title, isOpen, onCancel, onSubmit, children,
 }) => {
 
@@ -20,8 +20,8 @@ export const Modal = ({
                 <section className="section__text">
                   <div className="text__wrapper_left">
                     <p className="text_primary_lg">Collect points & <br /> reward yourself!</p>
-                    <p className="text_secondary_lg"> 
-                      The points define the informative of your 
+                    <p className="text_secondary"> 
+                      The points define the informative of your <br />
                       application and you can use them later to 
                       reward yourself
                     </p>
@@ -114,11 +114,6 @@ export const Modal = ({
                     </div>
                   </p>
                 </div>
-              </div>
-              
-              <div className="modalFooter">
-                <button onClick={onCancel} invert>Cancel</button>
-                <button onClick={onSubmit}>Submit</button>
               </div>
             </div>
           </div>

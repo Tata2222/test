@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { ModalChanel } from './ModalChanel';
+import { ModalRegistration } from './ModalRegistration';
 import { FillCheckCycle, Check, Line, RightArrow, ChevronDown } from "./styles/icons/SvgSprite";
-import { CV } from './pages/CV';
+import CV from './pages/cv';
 import Button from './components/Button';
 import './App.scss';
 
@@ -15,8 +15,6 @@ function App() {
  
   return (
     <div className="container" id="container" style={{maxWidth:'400px', margin: 'auto', border: '1px solid black'}}>
-      {pageName==='Information'
-      ? <>
       <header className="header">
        <div className="header header__container">
 
@@ -33,6 +31,9 @@ function App() {
       </header>
 
      <main className="main">
+
+     {pageName==='Information'
+      ? <>
       <div className="section__company">
         <div className="company__proposition">
           <img className="company__logo" src="./images/proSiebenSat_logo.svg" alt="logo"/>
@@ -111,12 +112,14 @@ function App() {
               </div>
               <button className="btnSecondary" type="button">Continue<span className="btn__icon"><RightArrow /></span></button>
             </div>
-          </form>
-         
+          </form> 
         </section>
       </div>
-     </main>
+      </>
+      : <CV />}
 
+     </main>
+    
      <footer className="footer">
       <div className="footer__text">Do you need help?</div>
       <div className="footer__profit">
@@ -128,17 +131,15 @@ function App() {
         <span className="footer__imprint">Imprint</span>
         {/* <select></select> */}
       </div>
-
     </footer>
-    </>
-    : <CV />}
+
 
     <Button type="submit" className="btnEmail">Btn<span className="btn__icon"><RightArrow /></span></Button>
     <button onClick={()=>setPageName('CV')}>CV</button>
     
-    <ModalChanel onCancel={() => setIsModalOpen(false)} isOpen={isModalOpen}>
+    <ModalRegistration onCancel={() => setIsModalOpen(false)} isOpen={isModalOpen}>
       
-    </ModalChanel>
+    </ModalRegistration>
        
     </div>
   );

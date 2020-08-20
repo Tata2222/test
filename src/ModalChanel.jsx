@@ -31,10 +31,10 @@ return(
               </div>
 
               <div className="modalBody">
-                <div className="footer__profit">
-                  <span className="footer__profitItem"><span className="footer__profitItemIcon"><FillCheckCycle width={15} hight={15} /></span> 100%</span>
-                  <span className="footer__profitItem"><span className="footer__profitItemIcon"><FillCheckCycle width={15} hight={15} /></span> no Ads</span>
-                  <span className="footer__profitItem"><span className="footer__profitItemIcon"><FillCheckCycle width={15} hight={15} /></span> super secure</span>
+                <div className="profit">
+                  <span className="profitItem"><span className="footer__profitItemIcon"><FillCheckCycle width={15} hight={15} /></span> 100%</span>
+                  <span className="profitItem"><span className="footer__profitItemIcon"><FillCheckCycle width={15} hight={15} /></span> no Ads</span>
+                  <span className="profitItem"><span className="footer__profitItemIcon"><FillCheckCycle width={15} hight={15} /></span> super secure</span>
                 </div>
 
                 <section className="section__appSupport">
@@ -110,11 +110,6 @@ return(
                   </div>
                 </section>
 
-                <div className="changeNumber">
-                  <p className="changeNumber__text">Not the correct number?</p>
-                  <a href="./" className="changeNumber__link">Change number now</a>
-                </div> 
-               
               </div>
               <div className="modalFooter">
                  

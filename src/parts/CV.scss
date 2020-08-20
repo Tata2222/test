@@ -50,6 +50,7 @@
 
   &__error {   
     font-size: 12px;
+    font-weight: 500;
     color: var(--c-primary);
     width: 230px;
     text-align: center;
@@ -62,4 +63,50 @@
     text-align: center;
     margin: 15px auto 0;
   }
+
+  &__gap {
+    margin-top: 40px; 
+  }
+}
+
+ 
+.file {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+
+  &IconWrapper {
+    height: 60px;
+    width: 60px;
+    margin: 0 15px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &Text {
+    display: flex;
+    align-items: center;
+  }
+  
+  &Btn {
+    width: 100%;
+    height: 60px;
+    background: var(--c-secondary);
+    color: var(--c-text-dark);
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+  
+    border-radius: var(--border-radius);
+    cursor: pointer;
+  }
+}
+
+.section__file {
+  margin-bottom: 10px;
+
+  width: 100%;
+  position: relative;
+  text-align: center;
 }

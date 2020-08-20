@@ -13,6 +13,7 @@
 @import "./parts/password.scss";
 @import "./parts/phoneApp.scss";
 @import "./parts/block.scss";
+@import "./parts/chat.scss";
 
 
 .container {
@@ -25,6 +26,14 @@ box-sizing: border-box;
 .main {
   display: flex;
   flex-direction: column;
+}
+
+.chanel__container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 40px;
 }
 
 .info__container {
@@ -46,23 +55,9 @@ box-sizing: border-box;
       display: flex;
       justify-content: space-between;
     }
-
-    &__item {
-
-    }
   }          
 }
 
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .section {
   &__company {
@@ -138,6 +133,7 @@ box-sizing: border-box;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto);
     row-gap: 18px;
+    margin-bottom: 60px;
   }
 }
 

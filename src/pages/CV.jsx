@@ -1,26 +1,9 @@
 import React from 'react';
+import { Line, RightArrow, UpArrow } from "../styles/icons/SvgSprite";
 
-import { Check, Line, RightArrow, UpArrow } from "../styles/icons/SvgSprite";
-
-export const CV = () => {
+const CV = () => {
   return (
     <>
-      <header className="header">
-       <div className="header header__container">
-
-         <div className="header progressBar">
-            <ul className="progressBar__list">
-              <li className="progressBar__item">Information</li>
-              <span className="progressBar__separator"><Line /></span>
-              <li className="progressBar__item_active">CV</li>
-              <span className="progressBar__separator"><Line /></span>
-              <li className="progressBar__item">Application</li>
-            </ul>
-          </div>
-        </div>
-      </header>
-
-     <main className="main">
      <div className="section__company_empty">
         <button className="points__label">200P&deg;</button>
       </div>
@@ -61,22 +44,9 @@ export const CV = () => {
         
         </section>
       </div>
-     </main>
-
-     <footer className="footer">
-      <div className="footer__text">Do you need help?</div>
-      <div className="footer__profit">
-        <span className="footer__profitItem"><span className="footer__profitItemIcon"><Check /></span> 100%</span>
-        <span className="footer__profitItem"><span className="footer__profitItemIcon"><Check /></span> no Ads</span>
-        <span className="footer__profitItem"><span className="footer__profitItemIcon"><Check /></span> super secure</span>
-      </div>
-      <div className="footer__imprintBlock">
-        <span className="footer__imprint">Imprint</span>
-        {/* <select></select> */}
-      </div>
-
-    </footer>
-
     </>
   );
 }
+
+
+export default CV;

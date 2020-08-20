@@ -19,7 +19,7 @@ export const ModalContact = ({
     
                 <div className="imgContainer_sm">
                   <span></span>
-                  <p className="helpText">Do you need help?</p>
+                  <p className="modalHeader__helpText">Do you need help?</p>
                 </div>
               </div>
 

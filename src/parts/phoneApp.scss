@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  &Name {
-    margin-top: 12px;
-    font-size: 14px;
-    color: var(--c-text-dark);
-  }
+.phoneAppName {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--c-text-dark);
 }
