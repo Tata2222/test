@@ -1,6 +1,6 @@
 import React from 'react';
 import Portal from './Portal';
-import { RightArrow } from "./styles/icons/SvgSprite";
+import { Line, RightArrow, Close } from "./styles/icons/SvgSprite";
 
 import './Modal.scss';
 
@@ -14,14 +14,16 @@ export const ModalRegistration = ({
         <Portal>
           <div className="modalOverlay">
             <div className={isOpen ? "modalWindow_short open" : "modalWindow_short"}>
-              <div className="modalHeader">
-                <button name="times" onClick={onCancel}>x</button>
+              <div className="modalHeader_fill">
+                <button className="modalHeader__btn" name="times" onClick={onCancel}><Close /></button>
+                <span className="modalHeader__icon"><Line width={50} height={3} /></span>
+                <img src="./images/man.jpg" class="modalHeader__img_top" alt="img_top" />
 
                 <section className="section__text">
                   <div className="text__wrapper_left">
                     <p className="text_primary_lg">More success for <br /> your application!</p>
                     <p className="text_secondary_lg"> 
-                      For this, we need detailed information about you:
+                      For this, we need detailed  <br /> information about you:
                     </p>
                   </div>
                 </section>
@@ -51,7 +53,6 @@ export const ModalRegistration = ({
                   </form>
                 </section>
 
-                
                 </div>
               <div className="modalFooter">
                 <button className="btnPrimary" type="button">Continue<span className="btn__icon"><RightArrow /></span></button>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Slider } from '../components/Slider';
 
 import { FillCheckCycle, Check, RightArrow } from "../styles/icons/SvgSprite";
 
@@ -19,6 +20,7 @@ const Application = () => {
         
         <section className="slider">
           <div className="section__title">Recommended Application forms</div>
+          <Slider />
         </section>
 
         <section  className="section__application">

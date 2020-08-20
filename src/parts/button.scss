@@ -94,6 +94,10 @@
   &:active,
   &:hover {
     color: var(--c-primary);
+
+    svg {
+      fill: var(--c-primary)
+    }
   }
 }
 
@@ -293,4 +297,21 @@
 .btnLivechat {
   background: var(--c-facebook-btn);
   border: 1px solid  var(--c-facebook-btn);
+}
+
+.btnSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: transparent;
+  margin: auto;
+
+  svg {
+    fill: var(--base-white);
+    width: 40px;
+    height: 50px;
+  }
 }

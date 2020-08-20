@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { ModalRegistration } from './ModalRegistration';
+import { ModalApply } from './ModalApply';
 import { FillCheckCycle, Check, Line, RightArrow, ChevronDown } from "./styles/icons/SvgSprite";
-import CV from './pages/cv';
+import Application from './pages/application';
 import Button from './components/Button';
 import './App.scss';
 
@@ -116,7 +116,7 @@ function App() {
         </section>
       </div>
       </>
-      : <CV />}
+      : <Application />}
 
      </main>
     
@@ -137,9 +137,9 @@ function App() {
     <Button type="submit" className="btnEmail">Btn<span className="btn__icon"><RightArrow /></span></Button>
     <button onClick={()=>setPageName('CV')}>CV</button>
     
-    <ModalRegistration onCancel={() => setIsModalOpen(false)} isOpen={isModalOpen}>
+    <ModalApply onCancel={() => setIsModalOpen(false)} isOpen={isModalOpen}>
       
-    </ModalRegistration>
+    </ModalApply>
        
     </div>
   );

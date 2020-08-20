@@ -16,9 +16,10 @@ export const ModalContact = ({
             <div className={isOpen ? "modalWindow_contact open" : "modalWindow_contact"}>
          
               <div className="modalHeader_full">
-    
+                
+                <button className="modalHeader__btn" name="times" onClick={onCancel}><Close /></button>
                 <div className="imgContainer_sm">
-                  <span></span>
+                  <span className="modalHeader__icon"><Line width={50} height={3} /></span>
                   <p className="modalHeader__helpText">Do you need help?</p>
                 </div>
               </div>

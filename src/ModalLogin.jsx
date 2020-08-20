@@ -15,9 +15,10 @@ export const ModalLogin = ({
         <Portal>
           <div className="modalOverlay">
             <div className={isOpen ? "modalWindow_short open" : "modalWindow_short"}>
-              <div className="modalHeader">
-               {/* <img className="modalHeader__img" src="./images/man.jpg" alt="header_img" />*/}
-                <button name="times" onClick={onCancel}>x</button>
+              <div className="modalHeader_fill">
+                <button className="modalHeader__btn" name="times" onClick={onCancel}><Close /></button>
+                <span className="modalHeader__icon"><Line width={50} height={3} /></span>
+                <img src="./images/man.jpg" class="modalHeader__img_top" alt="img_top" />
 
                 <section className="section__text">
                   <div className="text__wrapper_left">

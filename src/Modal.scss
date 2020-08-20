@@ -74,7 +74,7 @@ $border-radius: 8px;
   box-sizing: border-box;
 }
 
-.modalHeader_full,
+.modalHeader_fill,
 .modalHeader {
   position: relative;
   display: flex;
@@ -89,6 +89,13 @@ $border-radius: 8px;
   .helpText {
     font-size: 13px;
   }
+
+  &_fill {
+    height: 160px;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 0 25px;
+    box-sizing: border-box;
+  }
 }
 
 .modalHeader__helpText {
@@ -98,6 +105,20 @@ $border-radius: 8px;
   font-size: 13px;
   bottom: 7px;
   z-index: 10;
+}
+
+.modalHeader__icon {
+  margin: 0 auto 20px;
+
+  svg {
+    stroke: var(--c-secondary);
+  }
+}
+
+.modalHeader__btn {
+  position: absolute;
+  right: 25px;
+  top: 20px;
 }
 
 .modalBody {
@@ -118,6 +139,17 @@ $border-radius: 8px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+
+  &_top {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;   
+  }
 }
 
 .modalFooter {

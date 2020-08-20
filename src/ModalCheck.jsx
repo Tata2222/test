@@ -17,15 +17,19 @@ export const ModalCheck = ({
             <div className={isOpen ? "modalWindow_short open" : "modalWindow_short"}>
          
               <div className="modalHeader_full">
-    
+
+                <button className="modalHeader__btn" name="times" onClick={onCancel}><Close /></button>   
                 <div className="imgContainer">
-                <div className="track__pointBlock">
-                  <div className="points">
-                    <span className="points__checkedLabel">
-                      <span className="points__checkedLabelIcon"><FillCheckCycle width={20} hight={20} /></span>
-                      +500
-                    </span>
-                  </div>
+                  <span className="modalHeader__icon"><Line width={50} height={3} /></span>
+                  <div className="track__pointBlock">
+                    <div className="points">
+                      <span className="points__checkedLabel">
+                        <span className="points__checkedLabelIcon">
+                          <FillCheckCycle width={20} hight={20} />
+                        </span>
+                        +500
+                      </span>
+                    </div>
                   </div>
                   <img className="modalHeader__img" src='./images/woman.jpg' alt='header_img' />
                 </div>

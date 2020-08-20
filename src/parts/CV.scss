@@ -10,13 +10,13 @@
     box-sizing: border-box;
     background-color: #f7f7f7;
     border-radius: var(--border-radius); 
-    /*border: 1px dashed #161616;*/
     background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect rx='8' ry='8' width='100%' height='100%' style='fill: none; stroke: lightgray; stroke-width: 2; stroke-dasharray: 5 5'/></svg>");
   }
             
   &__pictureText {
     font-size: 14px;
     font-weight: 800;
+    margin-top: 10px;
   }
 
   &__pictureFormat {
