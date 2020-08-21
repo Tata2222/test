@@ -56,6 +56,7 @@ export const ModalVideoclip = ({
                       <span className="videorecord__time">0:32</span>
                     </div>
                   </div>
+
                   <div className="videorecord_second">
                     <video className="videorecord__video" src="./" 
                       poster="./images/darkhead_man.jpg" 
@@ -70,16 +71,15 @@ export const ModalVideoclip = ({
                   </div>
 
                   <div className="videorecord_third">
-                    <img className="videorecord__video" src="./images/speaker.svg" alt="speaker" /> 
-                  
-                    <audio className="videorecord__audio">
-                      <source src="./" />
-                    </audio>
-
-                    <p className="videorecord__name">Lena</p>
+                    <video className="videorecord__video" src="./" 
+                      poster="./images/woman_in_red.jpg" 
+                      height="100%" 
+                      width="100%">  
+                    </video>
+                    <p className="videorecord__name">Tom</p>
                     <div className="videorecord__panel">
-                      <button className="btnPlayAudio"  color={'ef001f'}><Triangle /></button>
-                      <span className="videorecord__time_audio">0:32</span>
+                      <button className="btnPlayVideo"><Triangle /></button>
+                      <span className="videorecord__time">0:32</span>
                     </div>
                   </div>
                 </section>

@@ -65,12 +65,26 @@
     align-items: center;
     height: 16px;
   }
+
+  &__iconLogo {
+    margin-left: 8px;
+  }
 }
 
 .btnDefault {
   background-color: var(--c-default-btn);
+  border: 1px silid var(--c-default-btn);
   color: var(--base-white);
-}
+
+  &:hover { 
+    border: 1px solid var(--c-default-btn);
+    color: var(--c-default-btn);
+    
+      svg {
+        fill: var(--c-default-btn);
+      }
+    }
+  }
 
 .btnAttachment {
   display: flex;
@@ -251,7 +265,7 @@
 
   &:active,
   &:hover {
-    color: var(--c-primary);
+    color: var(--c-icon-secondary);
   }
 }
 
@@ -274,7 +288,7 @@
 
   &:active,
   &:hover {
-    color: var(--c-primary);
+    color: var(--c-icon-secondary);
   }
 }
 
@@ -314,11 +328,13 @@
   border-radius: 50%;
   background-color: transparent;
   margin: auto;
+  z-index: 10;
 
   svg {
     fill: var(--base-white);
     width: 40px;
     height: 50px;
+    z-index: 10;
   }
 }
 
@@ -395,3 +411,12 @@
   }
 }
 
+.btnChevron {
+  display: flex;
+  justify-content: center;
+  margin: 65px auto;
+
+  svg {
+    fill: var(--c-light-element);
+  }
+}

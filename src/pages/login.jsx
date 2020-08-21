@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import { FillCheckCycle, Check, Line, RightArrow, ChevronDown } from "./styles/icons/SvgSprite";
-import Button from './components/Button';
-import './App.scss';
+import { FillCheckCycle, Check, Line, RightArrow, ChevronDown } from "../styles/icons/SvgSprite";
+import Button from '../components/Button';
+
 
 
 const Login = () => {
@@ -21,9 +21,8 @@ const Login = () => {
 
    
       <div className="section__company">
-        <div className="company__proposition">
-          <img className="company__logo" src="./images/proSiebenSat_logo.svg" alt="logo"/>
-          <div className="company__vacancy">Praktikant (m/w/d) Corporate Controlling</div>
+        <div className="company__proposition_default">
+          <img className="company__logo" src="./images/jobufo.svg" alt="logo"/>
         </div>
         <div className="company__imgWrapper">
           <img className="company__img" src="./images/blackwoman.jpg" alt="company_image" />
@@ -43,8 +42,8 @@ const Login = () => {
         </section>
 
         <div className="buttonPanel">
-          <Button className="btnLoginGoogle">Login with<span></span></Button>
-          <Button className="btnLoginFacebook">Login with<span></span></Button>
+          <Button className="btnLoginGoogle">Login with<span className="btn__iconLogo"><img src="./images/google.svg" alt="btn_icon"/></span></Button>
+          <Button className="btnLoginFacebook">Login with<span className="btn__iconLogo"><img src="./images/facebook.svg" alt="btn_icon"/></span></Button>
         </div>
         <div className="cv__separation"><span className="cv__separator"><Line width={50} /></span>or<span className="cv__separator"><Line width={50} /></span></div>
          

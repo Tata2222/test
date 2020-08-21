@@ -1,5 +1,5 @@
 import React from 'react';
-import { RightArrow, FillCheckCycle, Close } from "./styles/icons/SvgSprite";
+import { RightArrow, ReverseCycle, Close } from "./styles/icons/SvgSprite";
 import Button from './components/Button';
 
 import Portal from './Portal';
@@ -37,8 +37,8 @@ export const ModalApply = ({
 
                 <section className="section__slide">
                   <div className="slide__container">
-                    <span className="slide__icon"><FillCheckCycle width={20} height={20} /></span>
-                    <img className='slide__img' src='./images/blondman_with_phone.jpg' alt='slide_img' />
+                    <span className="slide__icon"><ReverseCycle /></span>
+                    <img className='slide__img' src='./images/pen.jpg' alt='slide_img' />
 
                     <section className="slide__info">
       
@@ -48,16 +48,13 @@ export const ModalApply = ({
                         <li  className="slide__item">Finish short games</li>
                       </ul>
                       <Button className="btnSlide"><RightArrow /></Button>
-                    </section>
-
-                   
+                    </section> 
                   </div>
                 </section>
+
                 <p className="cv__finishLater">Finish later</p>    
               </div>
 
-            
-        
             </div>
           </div>
       </Portal>

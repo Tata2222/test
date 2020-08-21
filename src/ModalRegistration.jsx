@@ -33,22 +33,37 @@ export const ModalRegistration = ({
 
                 <section  className="section__form_contacts">
                   <form className="form">
-              
-                    <input className="form__input" type="text" name="adress" placeholder="Street & House number" required/>
-                    <div className="form__cityBlock">
-                      <input className="form__input_sm" type="text" name="zip" placeholder="ZIP" required/>
-                      <select className="form__input"  name="city" required>
-                        <option value="">Berlin</option>
-                      </select>
+                    <div className="form__inputWrapper">
+                      <input className="form__input" type="text" name="adress" placeholder="Street & House number" required/>
+                      <span className="form__inputIcon" />
                     </div>
-                    <select className="form__input"  name="country" required>
-                      <option value="">Germany</option>
-                    </select>
-                    <div className="form__phoneBlock">
-                      <select className="form__input_code"  name="code" required>
-                        <option value="">+49</option>
+                    <div className="form__cityBlock">
+                      <div className="form__inputWrapper">
+                      
+                        <input className="form__input_sm" type="text" name="zip" placeholder="ZIP" required/>
+                        
+                       
+                          <select className="form__input"  name="city" required>
+                            <option value="">Berlin</option>
+                          </select>
+                          <span className="form__inputIcon" />
+                      </div>
+                    </div>
+
+                    <div className="form__inputWrapper">
+                      <select className="form__input"  name="country" required>
+                        <option value="">Germany</option>
                       </select>
-                      <input className="form__input_phone" type="tell" name="phone" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                      <span className="form__inputIcon" />
+                    </div>
+                    <div className="form__phoneBlock">
+                      <div className="form__inputWrapper">
+                        <select className="form__input_code"  name="code" required>
+                          <option value="">+49</option>
+                        </select>
+                        <input className="form__input_phone" type="tell" name="phone" placeholder="Phone" pattern="[0-9]{11}" required />
+                        <span className="form__inputIcon" />
+                      </div>
                     </div>
                   </form>
                 </section>

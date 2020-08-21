@@ -88,6 +88,7 @@ $border-radius: 8px;
 
   .helpText {
     font-size: 13px;
+    z-index: 10;
   }
 
   &_fill {
@@ -108,7 +109,10 @@ $border-radius: 8px;
 }
 
 .modalHeader__icon {
-  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto 20px;
+  z-index: 10;
 
   svg {
     stroke: var(--c-secondary);
@@ -119,6 +123,18 @@ $border-radius: 8px;
   position: absolute;
   right: 25px;
   top: 20px;
+  z-index: 20;
+
+  svg {
+    fill: var(--c-text-dark);
+    transition: all 0.25 ease-in;
+  }
+
+  &:hover {
+    svg {
+      fill: var(--c-light-element);
+    }
+  }
 }
 
 .modalBody {
@@ -138,7 +154,7 @@ $border-radius: 8px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1;
+  z-index: 0;
 
   &_top {
     position: absolute;
@@ -147,7 +163,7 @@ $border-radius: 8px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: 0;
     border-radius: var(--border-radius) var(--border-radius) 0 0;   
   }
 }
@@ -303,7 +319,7 @@ $border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 60px;
 
   &Text {
     font-size: 12px;
@@ -324,6 +340,14 @@ $border-radius: 8px;
 
   &List {
     display: flex;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    right: -13px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &Item {
@@ -335,6 +359,8 @@ $border-radius: 8px;
     border-radius: var(--border-radius);
     background-color: var(--c-secondary);
     margin-right: 13px;
+    font-size: 27px;
+    font-weight: 700;
 
     &:last-of-type {
       margin-left: 0;

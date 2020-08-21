@@ -1,7 +1,7 @@
 import React from 'react';
 import Portal from './Portal';
 import Button from './components/Button';
-import { FillCheckCycle, RightArrow } from "./styles/icons/SvgSprite";
+import { FillCheckCycle, RightArrow, Close, Line } from "./styles/icons/SvgSprite";
 
 import './Modal.scss';
 

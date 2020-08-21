@@ -1,5 +1,6 @@
 import React from 'react';
 import Portal from './Portal';
+import { Line, Close, FillCheckCycle } from "./styles/icons/SvgSprite";
 
 import './Modal.scss';
 
@@ -41,6 +42,7 @@ export const ModalVerification = ({
                     <div className="codeItem active"><span></span></div>
                     <div className="codeItem empty"><span></span></div>
                     <div className="codeItem empty"><span></span></div>
+                    <span className="code__icon"><FillCheckCycle width={17} height={17} color={'#1bb906'} /></span>
                   </div>
                   <p className="codeText">
                     Great, your telephone number <br /> was verified!

@@ -1,5 +1,6 @@
 import React from 'react';
-import { RightArrow } from "./styles/icons/SvgSprite";
+import  Button  from "./components/Button";
+import { RightArrow, Close } from "./styles/icons/SvgSprite";
 
 import Portal from './Portal';
 
@@ -15,7 +16,7 @@ export const ModalShortApplication = ({
           <div className="modalOverlay">
            <div className={isOpen ? "modalWindow open" : "modalWindow"}>
               <div className="modalHeader">
-                <button name="times" onClick={onCancel}>x</button>
+                <button className="modalHeader__btn" name="times" onClick={onCancel}><Close /></button>
             
 
                 <div className="section__company_empty">
@@ -33,6 +34,31 @@ export const ModalShortApplication = ({
               </div>
 
               <div className="modalBody">
+
+                <section className="section__slide">
+                  <div className="slide__container_fill">
+
+                   
+                    <div className="section__logo">
+                      <img className='slide__logo' src='./images/whatsApp.svg' alt='slide_img' />
+                      <p className="slide__title">Short application</p>
+                    </div>
+
+                  
+                    <section className="slide__info_sm">
+  
+                      <ul className="slide__list">
+                        <li className="slide__item">Answer 5 easy questions</li>
+                        <li  className="slide__item">chat with WhatsApp</li>
+                      </ul>
+                 
+                      
+                      </section> 
+                      <Button className="btnSlide"><RightArrow /></Button>
+                      
+                  </div>
+                </section>
+
                 <p className="cv__finishLater">Finish later</p>    
               </div>
 

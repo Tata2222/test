@@ -7,9 +7,16 @@ import Button from './Button';
 export const Slide = ( {slide} ) => {
   return (
 
-     <div className="slide">
-        <span className="slide__icon"><FillCheckCycle width={20} height={20} /></span>
-        <img className='slide__img' src={slide.src} alt='slide_img' />
+     <div className="slide" style={{background: `url('${slide.src}')`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
+
+        <div className="slide__block">
+          <div className="points">
+            <span className="points__checkedLabel">
+              <span className="points__checkedLabelIcon"><FillCheckCycle width={20} hight={20} color={'#e6e6e6'} /></span>
+              +500
+            </span>
+          </div>
+       {/* <img className='slide__img' src={slide.src} alt='slide_img' />*/}
 
         <section className="slide__info">
 
@@ -19,8 +26,10 @@ export const Slide = ( {slide} ) => {
               <li className="slide__item" key={index}>{item}</li>
             ))}
           </ul>
-          <Button className="btnSlide"><RightArrow /></Button>
+        
         </section>
+        </div>
+        <Button className="btnSlide"><RightArrow /></Button>
  </div>
   )
 }

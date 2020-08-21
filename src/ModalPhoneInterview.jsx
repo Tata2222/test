@@ -1,5 +1,6 @@
 import React from 'react';
-import { RightArrow } from "./styles/icons/SvgSprite";
+import { Slider } from './components/Slider';
+import { Close } from "./styles/icons/SvgSprite";
 
 import Portal from './Portal';
 
@@ -15,8 +16,7 @@ export const ModalPhoneInterview = ({
           <div className="modalOverlay">
            <div className={isOpen ? "modalWindow open" : "modalWindow"}>
               <div className="modalHeader">
-                <button name="times" onClick={onCancel}>x</button>
-            
+                <button className="modalHeader__btn" name="times" onClick={onCancel}><Close /></button>   
 
                 <div className="section__company_empty">
                   <button className="points__label">200P&deg;</button>
@@ -33,6 +33,12 @@ export const ModalPhoneInterview = ({
               </div>
 
               <div className="modalBody">
+
+                <section className="slider">
+                  <div className="section__title">How should we contact you?</div>
+                  <Slider />
+                </section>
+
                 <p className="cv__finishLater">Finish later</p>    
               </div>
               

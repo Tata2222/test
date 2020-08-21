@@ -1,12 +1,13 @@
 .company {
 
+  &__proposition_default,
   &__proposition {
     display: flex;
-    padding: 0 25px 10px;
+    padding: 14px 25px 10px;
   }
 
-  &__logo {
-
+  &__proposition_default {
+    background-color: var(--base-dark);
   }
 
   &__vacancy {

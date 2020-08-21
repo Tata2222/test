@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
-import { ModalSkills } from './ModalSkills';
+import { ModalVideoclip } from './ModalVideoclip';
 import { FillCheckCycle, Check, Line, RightArrow, ChevronDown } from "./styles/icons/SvgSprite";
-import CvCreate from './pages/createcv';
-import Button from './components/Button';
 import './App.scss';
 
 
 function App() {
   const [isModalOpen, setIsModalOpen]= useState(false);
-  const [pageName, setPageName] = useState('Information');
   const [isTrackOpen, setTrackOpen]= useState(false);
 
-  console.log(isModalOpen)
  
   return (
     <div className="container" id="container" style={{maxWidth:'400px', margin: 'auto', border: '1px solid black'}}>
@@ -32,8 +28,7 @@ function App() {
 
      <main className="main">
 
-     {pageName==='Information'
-      ? <>
+     <>
       <div className="section__company">
         <div className="company__proposition">
           <img className="company__logo" src="./images/proSiebenSat_logo.svg" alt="logo"/>
@@ -134,7 +129,6 @@ function App() {
         </section>
       </div>
       </>
-      : <CvCreate />}
 
      </main>
     
@@ -150,15 +144,9 @@ function App() {
         {/* <select></select> */}
       </div>
     </footer>
-
-
-    <Button type="submit" className="btnEmail">Btn<span className="btn__icon"><RightArrow /></span></Button>
-    <button onClick={()=>setPageName('CV')}>CV</button>
+ 
     
-    <ModalSkills onCancel={() => setIsModalOpen(false)} isOpen={isModalOpen}>
-      
-    </ModalSkills>
-       
+    <ModalVideoclip onCancel={() => setIsModalOpen(false)} isOpen={isModalOpen}></ModalVideoclip>   
     </div>
   );
 }

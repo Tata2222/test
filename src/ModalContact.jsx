@@ -1,5 +1,6 @@
 import React from 'react';
 import Portal from './Portal';
+import { Phone, Close, Line, WhatsAppPhone, LiveChat, ChevronDown } from './styles/icons/SvgSprite';
 import Button from './components/Button';
 
 import './Modal.scss';
@@ -34,20 +35,22 @@ export const ModalContact = ({
 
                 <section className="section__phoneAppPanel">
                   <div className="phoneAppWrapper">
-                   <Button className="btnTelephone"><span></span></Button>
+                   <Button className="btnTelephone"><span><Phone /></span></Button>
                    <p className="phoneAppName">Telephone</p>
                  </div>
                  <div className="phoneAppWrapper">
-                   <Button className="btnWhatsAppRound"><span></span></Button>
+                   <Button className="btnWhatsAppRound"><span><WhatsAppPhone /></span></Button>
                    <p className="phoneAppName">WhatsApp</p>
                  </div>
                  <div className="phoneAppWrapper">
-                   <Button className="btnLivechat"><span></span></Button>
+                   <Button className="btnLivechat"><span><LiveChat /></span></Button>
                    <p className="phoneAppName">Livechat</p>
                  </div>
                 </section>
 
                 <p className="note">All 100% free</p>
+
+                <button className="btnChevron" type="button"><span><ChevronDown/ ></span></button>
               </div>
 
             </div>

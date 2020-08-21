@@ -1,32 +1,3 @@
-/*.btn {
-  position: relative;
-  padding: 10px 15px;
-  background-color: #7CC6fE;
-  border: none;
-  color: green;
-  font-weight: 600;
-  cursor: pointer;
-  text-transform: uppercase;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background-color: #70B4E6;
-}
-
-.btn[disabled] {
-  opacity: .5;
-  cursor: not-allowed;
-}
-
-.btn.active {
-  background-color: #23C9FF;
-  border: 1px solid #5EB2F2;
-  box-shadow: 0px 0 2px 0px #C0C0C0;
-}*/
-
-
 .btn {
   &Secondary {
     display: flex;
@@ -44,7 +15,7 @@
     transition: all 0.3s ease;
     margin: auto;
     svg {
-      fill: var(--c-icon-secondary);
+      color: var(--c-icon-secondary);
     }
 
     &:active,
@@ -57,6 +28,7 @@
     }
   }
 
+  &Default,
   &Primary {
     display: flex;
     justify-content: space-between;
@@ -79,11 +51,13 @@
 
     &:active,
     &:hover {
-      color: var(--c-secondary);
+      color: var(--c-primary);
+      background: var(--base-wight);
+
       svg {
-        fill: green;
+        fill: var(--c-primary);
       }
-    }  
+    }
   }
 
   &__icon {
@@ -91,7 +65,26 @@
     align-items: center;
     height: 16px;
   }
+
+  &__iconLogo {
+    margin-left: 8px;
+  }
 }
+
+.btnDefault {
+  background-color: var(--c-default-btn);
+  border: 1px silid var(--c-default-btn);
+  color: var(--base-white);
+
+  &:hover { 
+    border: 1px solid var(--c-default-btn);
+    color: var(--c-default-btn);
+    
+      svg {
+        fill: var(--c-default-btn);
+      }
+    }
+  }
 
 .btnAttachment {
   display: flex;
@@ -121,14 +114,50 @@
   &:active,
   &:hover {
     color: var(--c-primary);
+
+    svg {
+      fill: var(--c-primary)
+    }
   }
 }
 
-.btnDiscard,
-.btnEmail,
+.btnRemind {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--c-secondary);
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: var(--border-radius);
+  border: 1px solid  var(--c-secondary);
+  padding: 0.8em 1em;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  color: var(--c-text-dark);
+  transition: all 0.3s ease;
+  margin: 10px auto 20px;
+  
+  svg {
+    fill: var(--c-text-dark);
+  }
+
+  &:active,
+  &:hover {
+    color: var(--c-text-light);
+
+    svg {
+      fill: var(--c-text-light);
+    }
+  }
+
+}
+
 .btnSms,
 .btnTelegram,
-.btnWhatsApp {
+.btnWhatsApp,
+.btnDiscard,
+.btnEmail {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -142,14 +171,15 @@
   height: 60px;
   color: var(--base-white);
   transition: all 0.3s ease;
-
+  
   svg {
     fill: var(--base-white);
   }
 
   &:active,
   &:hover {
-    color: var(--c-primary);
+    color: var(--bg-whatsapp-btn);
+    background-color: var(--base-white);
 
     svg {
       fill: var(--bg-whatsapp-btn);
@@ -226,14 +256,16 @@
   border: 1px solid  var(--c-google-btn);
   width: 120px;
   height: 40px;
-  font-size: 18px;
+  font-size: 12px;
+  font-weight: 500;
   color: var( --c-google-btn);
   cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
 
   &:active,
   &:hover {
-    color: var(--c-primary);
+    color: var(--c-icon-secondary);
   }
 }
 
@@ -250,15 +282,141 @@
   font-weight: 500;
   color: var( --base-white);
   cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
   margin-left: 10px;
 
   &:active,
   &:hover {
-    color: var(--c-primary);
+    color: var(--c-icon-secondary);
   }
 }
 
-.btnTelegram {
+.btnLivechat,
+.btnWhatsAppRound,
+.btnTelephone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
 
+.btnTelephone {
+  background: var(--baze-white);
+  border: 1px solid  var(--c-google-btn);
+}
+
+.btnWhatsAppRound {
+  background: var(--c-success);
+  border: 1px solid  var(--c-success);
+}
+
+.btnLivechat {
+  background: var(--c-facebook-btn);
+  border: 1px solid  var(--c-facebook-btn);
+}
+
+.btnSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: transparent;
+  margin: auto;
+  z-index: 10;
+
+  svg {
+    fill: var(--base-white);
+    width: 40px;
+    height: 50px;
+    z-index: 10;
+  }
+}
+
+.btnPlayVideo,
+.btnPlayAudio {
+  width: 30px;
+  height:30px;
+  background: transparent;
+}
+
+.btnPlayVideo {
+
+  svg {
+    fill: var(--base-white);
+  }
+}
+
+.btnPlayAudio {
+
+  svg {
+    fill: var(--c-active);
+  }
+}
+
+.btnCloseModal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.btnCloseFile {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.btnSkill_disabled,
+.btnSkill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--c-primary);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 25px;
+  border: 1px solid  var(--c-primary);
+  padding: 0.8em 1.8em;
+  cursor: pointer;
+  width: auto;
+  height: 50px;
+  color: var(--base-white);
+  transition: all 0.3s ease;
+  margin-right: 15px;
+
+  &:hover {
+    color: var(--c-primary);
+    background: var(--base-wight);
+  }
+}
+
+.btnSkill_disabled {
+  background: var(--c-secondary);
+  border: 1px solid  var(--c-secondary);
+  color: var(--c-light-element);
+
+  &:hover {
+    color: var(--c-primary);
+  }
+
+  &:active {
+    background: var(--c-primary);
+    color: var(--base-wight);
+  }
+}
+
+.btnChevron {
+  display: flex;
+  justify-content: center;
+  margin: 65px auto;
+
+  svg {
+    fill: var(--c-light-element);
+  }
 }

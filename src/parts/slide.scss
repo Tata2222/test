@@ -3,9 +3,19 @@
 }
 
 .slide {
-  /*position: relative;
-  width: 100%;*/
 
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+
+  &__container_fill,
   &__container {
     position: relative;
     display: flex;
@@ -19,9 +29,21 @@
     margin: 0 auto;
   }
 
+  &__container_fill {
+    background-color: var(--bg-whatsapp-btn);
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__block {
+    margin: 12px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
   }
   
   &__icon {
@@ -42,6 +64,11 @@
 
   &__info {
     margin-left: 18px; 
+    z-index: 10;
+  }
+
+  &__info_sm {
+    margin-left: 48px;
   }
 
   &__title{
@@ -62,17 +89,13 @@
   }
 }
 
-.slider {
-  &__btnPanel {
-    position: absolute;
-    z-index: 10;
-
-  }
-}
 
 .slider {
   width: 100%;
   height: auto;
-  border: 1px solid black;
-   margin-bottom: 30px;
+  margin-bottom: 30px;
+
+  &__wrapper {
+    display: flex;
   }
+}
