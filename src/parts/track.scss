@@ -123,7 +123,13 @@
 
   &__text {
     font-size: 16px;
-    color: var(--c-text-darkgray)
+    color: var(--c-text-darkgray);
+
+    &_bold {
+      font-size: 16px;
+      color: var(--c-text-darkgray);
+      font-weight: 800;
+    }
   }
 }
 

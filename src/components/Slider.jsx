@@ -3,7 +3,7 @@ import { Slide } from './Slide';
 
 const CARDS = [
   {id: 1, src: './images/woman_with_phone.jpg', title: 'Your Videovlip', textList: ['Most popular', 'Introduction in 30 sec']},
-  {id: 1, src: './images/woman_with_phone.jpg', title: 'Your Videovlip', textList: ['Most popular', 'Introduction in 30 sec']},
+  {id: 1, src: './images/blondman_with_phone.jpg', title: 'Your Videovlip', textList: ['Most popular', 'Introduction in 30 sec']},
   {id: 1, src: './images/woman_with_phone.jpg', title: 'Your Videovlip', textList: ['Most popular', 'Introduction in 30 sec']},
 ]
   
@@ -26,19 +26,19 @@ export const Slider = () => {
     const newLeftPosition = (imgWidth) * -path;
     console.log('click')
 
-    if (position === Math.ceil(sliderCards.length/4) && path === 1) {
+  /*  if (position === Math.ceil(sliderCards.length/4) && path === 1) {
       setPosition(1);
       setLeft(0);
 
       return;
-    }
+    }*/
 
-    if (position === 1 && path === -1) {
+   /* if (position === 1 && path === -1) {
       setPosition(Math.ceil(sliderCards.length/4));
       setLeft(imgWidth * path * (Math.ceil(sliderCards.length/4) - 1));
 
       return;
-    }
+    }*/
 
     setPosition(position + path);
     setLeft(left + newLeftPosition);
@@ -75,7 +75,7 @@ export const Slider = () => {
           transform: `translateX(${left}px)`,
           transition: `translate ease 0.3s`,
           display: 'grid',
-          gridTemplateColumns: `repeat(${sliderCards.length}, 225px)`,
+          gridTemplateColumns: `repeat(${sliderCards.length}, 285px)`,
           columnGap: '16px',
         }}>
           {sliderCards.map(slide => (

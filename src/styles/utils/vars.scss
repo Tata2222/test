@@ -10,6 +10,8 @@ $logo-width-min: 73px;
 
 :root {
   --base-white: #fff;
+  --base-dark: #080808;
+  --c-default-btn: #0900ED;
   --c-active: #ef001f;
   --c-primary: #ef001f;
   --c-disable: #f7f7f7;
@@ -21,6 +23,7 @@ $logo-width-min: 73px;
   --c-icon-secondary: #5c5c5c;
   --bg-point-list: #707070;
   --bg-empty-img: #bdbdbd;
+  --bg-record: #d0d0d0;
   --bg-attachment-btn: #e5e5e5;
   --bg-whatsapp-btn: #46C655;
   --c-success: #00B924;
@@ -30,6 +33,9 @@ $logo-width-min: 73px;
   --c-email-btn: #1B66B3;
   --c-sms-btn: #455A64;
   --c-telegram-btn:#1E96C8;
+  --c-quality-good: #00B924;
+  --c-quality-notOptimal: #E8A100;
+  --c-quality-bad: #ED0000;
   --border-radius: 8px;
   --modal-border-radius: 5%;
   --container-width: 1040px;

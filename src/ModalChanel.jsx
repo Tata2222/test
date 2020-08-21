@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Portal from './Portal';
-import { FillCheckCycle, RightArrow } from "./styles/icons/SvgSprite";
+import { FillCheckCycle, RightArrow, Close } from "./styles/icons/SvgSprite";
 import Button from './components/Button';
 
 import './Modal.scss';
@@ -18,7 +18,7 @@ return(
             <div className={isOpen ? "modalWindow_short open" : "modalWindow_short"}>
               <div className="modalHeader">
           
-                <button name="times" onClick={onCancel}>x</button>
+                <button className="btnCloseModal" name="times" onClick={onCancel}><Close /></button>
 
                 <section className="section__text">
                   <div className="text__wrapper">
@@ -40,7 +40,7 @@ return(
                 <section className="section__appSupport">
                   <div className="blockAppWrapper">
                     <Button type="submit" className="btnWhatsApp"  onClick={() => setBlockAppShow(!isblockAppShow)}>
-                      Btn
+                      <img src="./images/whatsApp.svg" alt="telegram" />
                       <span className="btn__icon"><RightArrow /></span>
                     </Button>
 
@@ -72,7 +72,7 @@ return(
                   </div>
                   <div className="blockAppWrapper">
                     <Button type="submit" className="btnTelegram" onClick={() => setBlockAppShow(!isblockAppShow)}>
-                      Btn
+                      <img src="./images/telegram.svg" alt="telegram" />
                       <span className="btn__icon"><RightArrow /></span>
                     </Button>
 
@@ -89,21 +89,21 @@ return(
                   </div>
                   <div className="blockAppWrapper">
                     <Button type="submit" className="btnSms" onClick={() => setBlockAppShow(!isblockAppShow)}>
-                      Btn
+                      <img src="./images/sms.svg" alt="sms" />
                       <span className="btn__icon"><RightArrow /></span>
                     </Button>
                     {/*isblockAppShow && <div className="block_WhatsApp"></div>*/}
                   </div>
                   <div className="blockAppWrapper">
                     <Button type="submit" className="btnDiscard" onClick={() => setBlockAppShow(!isblockAppShow)}>
-                      Btn
+                      <img src="./images/discard.svg" alt="discard" />
                       <span className="btn__icon"><RightArrow /></span>
                     </Button>
                     {/*isblockAppShow && <div className="block_WhatsApp"></div>*/}
                   </div>
                   <div className="blockAppWrapper">
                     <Button type="submit" className="btnEmail" onClick={() => setBlockAppShow(!isblockAppShow)}>
-                      Btn
+                      <img src="./images/email.svg" alt="email" />
                       <span className="btn__icon"><RightArrow /></span>
                     </Button>
                     {/*isblockAppShow && <div className="block_WhatsApp"></div>*/}

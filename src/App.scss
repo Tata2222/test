@@ -8,13 +8,14 @@
 @import "./parts/button.scss";
 @import "./parts/CV.scss";
 @import "./parts/profile.scss";
-
 @import "./parts/feedback.scss";
 @import "./parts/password.scss";
 @import "./parts/phoneApp.scss";
 @import "./parts/block.scss";
 @import "./parts/chat.scss";
 @import "./parts/slide.scss";
+@import "./parts/videoclip.scss";
+@import "./parts/videorecord.scss";
 
 
 .container {
@@ -120,8 +121,11 @@ box-sizing: border-box;
   &__phoneAppPanel {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 15px;
-    
+    margin-bottom: 15px; 
+  }
+
+  &__skills {
+    margin-bottom: 45px;
   }
 
   &__textPrimary {
@@ -135,6 +139,10 @@ box-sizing: border-box;
     grid-template-rows: repeat(5, auto);
     row-gap: 18px;
     margin-bottom: 60px;
+  }
+
+  &__points {
+    margin-bottom: 20px;
   }
 }
 

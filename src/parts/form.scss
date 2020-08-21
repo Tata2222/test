@@ -10,12 +10,18 @@
     font-weight: 500;
   }
 
-
   &__cityBlock,
   &__phoneBlock {
     display: flex;
   }
 
+  &__note {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--c-text-light);
+  }
+
+  &__input_date,
   &__input_sm,
   &__input_code,
   &__input_phone,
@@ -25,10 +31,9 @@
     padding: 10px 17px;
     border-radius: var(--border-radius);
     width: 100%;
-    margin-bottom: 16px;
     line-height: 26px;
     box-sizing: border-box;
-    margin-bottom: 14px;
+    /*margin-bottom: 14px;*/
 
     &::placeholder {
       font-size: 14px;
@@ -48,6 +53,15 @@
 
   &__input_phone {
     border-radius: 0 8px 8px 0;
+  }
+
+  &__input_date {
+    width: 48%;
+    margin-right: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
   input[type="radio"] {
@@ -90,6 +104,35 @@
     background-color: var(--c-light-element);
     left: 30px;
     top: 0;
+  }
+
+  &__inputWrapper {
+    position: relative;
+    margin-bottom: 14px;
+  }
+
+  &__inputWrapper_sm {
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  /*&__input_error {
+    position: relative;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: 95%;
+
+    &::placeholder {
+      color: var(--c-error);
+    }
+  }*/
+
+  &__inputIcon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
   }
 
   &__accept {

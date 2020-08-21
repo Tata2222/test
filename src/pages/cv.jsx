@@ -23,7 +23,15 @@ const CV = () => {
             <p className="cv__pictureFormat">as picture, .pdf, .docx or .odt</p>
           </div>
 
-          <div className="cv__separation"><span className="cv__separator"><Line width={50} /></span>or<span className="cv__separator"><Line width={50} /></span></div>
+          <div className="cv__separation">
+                  <span className="cv__separator">
+                    <Line width={50} />
+                  </span>
+                  or
+                  <span className="cv__separator">
+                    <Line width={50} />
+                  </span>
+                </div>
 
           <div className="cv__generator">
             <button className="btnGenerator">CV-Generator<span className="btn__icon"><RightArrow /></span></button>

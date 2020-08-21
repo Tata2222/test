@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { ModalApply } from './ModalApply';
+import { ModalSkills } from './ModalSkills';
 import { FillCheckCycle, Check, Line, RightArrow, ChevronDown } from "./styles/icons/SvgSprite";
-import Application from './pages/application';
+import CvCreate from './pages/createcv';
 import Button from './components/Button';
 import './App.scss';
 
@@ -62,16 +62,34 @@ function App() {
               <input type="radio" id="diverse" name="gender" value="diverse" />
               <label for="diverse">Diverse</label>
             </div>
-            <input className="form__input" type="text" name="name" placeholder="Name" required/>
-            <input className="form__input" type="text" name="lastname" placeholder="Last Name" required/>
-            <select className="form__input"  name="city" required>
-              <option value="">City</option>
-            </select>
-            <select className="form__input"  name="birthday" required>
-              <option value="">Birthday</option>
-            </select>
-            <input className="form__input" type="tell" name="phone" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
-            <input className="form__input" type="email" name="email" placeholder="E-mail" required />
+            <div className="form__inputWrapper">
+              <input className="form__input" type="text" name="name" placeholder="Name" required/>
+              <span className="form__inputIcon" />
+            </div>
+            <div className="form__inputWrapper">
+              <input className="form__input" type="text" name="lastname" placeholder="Last Name" required/>
+              <span className="form__inputIcon" />
+            </div>
+            <div className="form__inputWrapper">
+              <select className="form__input"  name="city" required>
+                <option value="">City</option>
+              </select>
+              <span className="form__inputIcon" />
+            </div>
+            <div className="form__inputWrapper">
+              <select className="form__input"  name="birthday" required>
+                <option value="">Birthday</option>
+              </select>
+              <span className="form__inputIcon" />
+            </div>
+            <div className="form__inputWrapper">
+              <input className="form__input" type="tell" name="phone" placeholder="Phone" pattern="[0-9]{11}" required />
+              <span className="form__inputIcon" />
+            </div>
+            <div className="form__inputWrapper">
+              <input className="form__input" type="email" name="email" placeholder="E-mail" required />
+              <span className="form__inputIcon" />
+            </div>
             <div className={isTrackOpen?"track":"track_disabled"}>
               <img className="track__img" src="./images/man_with_earphones.jpg" alt="img" />
               <div className="track__pointBlock">
@@ -116,7 +134,7 @@ function App() {
         </section>
       </div>
       </>
-      : <Application />}
+      : <CvCreate />}
 
      </main>
     
@@ -137,9 +155,9 @@ function App() {
     <Button type="submit" className="btnEmail">Btn<span className="btn__icon"><RightArrow /></span></Button>
     <button onClick={()=>setPageName('CV')}>CV</button>
     
-    <ModalApply onCancel={() => setIsModalOpen(false)} isOpen={isModalOpen}>
+    <ModalSkills onCancel={() => setIsModalOpen(false)} isOpen={isModalOpen}>
       
-    </ModalApply>
+    </ModalSkills>
        
     </div>
   );

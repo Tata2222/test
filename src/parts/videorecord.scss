@@ -1,0 +1,61 @@
+.videorecord {
+  display: grid;
+  grid-template-columns: repeat(2, [col] 1fr);
+  grid-template-rows: repeat(2, [row] 1fr);
+  width: 100%;
+  min-height: 324px;
+  margin-bottom: 40px;
+  gap: 10px;
+
+  &_first {
+    grid-row: row 1/span 2;
+  }
+
+  &_first,
+  &_third,
+  &_second {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-record);
+    border-radius: var(--border-radius);
+    padding: 13px 16px 10px 10px; 
+    overflow: hidden;
+  }
+
+  &__panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+
+  &__time_audio,
+  &__time {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--base-white);
+  }
+
+  &__name {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--base-white);
+    z-index: 10;
+  }
+
+  &__time_audio {
+    color: var(--c-active);
+  }
+
+  &__video {
+    position: absolute;
+    /*width: 120%;
+    height: 120%;*/
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    object-fit: cover;
+  }
+}

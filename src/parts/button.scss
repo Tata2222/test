@@ -28,6 +28,7 @@
     }
   }
 
+  &Default,
   &Primary {
     display: flex;
     justify-content: space-between;
@@ -64,6 +65,11 @@
     align-items: center;
     height: 16px;
   }
+}
+
+.btnDefault {
+  background-color: var(--c-default-btn);
+  color: var(--base-white);
 }
 
 .btnAttachment {
@@ -315,3 +321,77 @@
     height: 50px;
   }
 }
+
+.btnPlayVideo,
+.btnPlayAudio {
+  width: 30px;
+  height:30px;
+  background: transparent;
+}
+
+.btnPlayVideo {
+
+  svg {
+    fill: var(--base-white);
+  }
+}
+
+.btnPlayAudio {
+
+  svg {
+    fill: var(--c-active);
+  }
+}
+
+.btnCloseModal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.btnCloseFile {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.btnSkill_disabled,
+.btnSkill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--c-primary);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 25px;
+  border: 1px solid  var(--c-primary);
+  padding: 0.8em 1.8em;
+  cursor: pointer;
+  width: auto;
+  height: 50px;
+  color: var(--base-white);
+  transition: all 0.3s ease;
+  margin-right: 15px;
+
+  &:hover {
+    color: var(--c-primary);
+    background: var(--base-wight);
+  }
+}
+
+.btnSkill_disabled {
+  background: var(--c-secondary);
+  border: 1px solid  var(--c-secondary);
+  color: var(--c-light-element);
+
+  &:hover {
+    color: var(--c-primary);
+  }
+
+  &:active {
+    background: var(--c-primary);
+    color: var(--base-wight);
+  }
+}
+
