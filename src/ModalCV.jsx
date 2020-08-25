@@ -1,5 +1,5 @@
 import React from 'react';
-import { Line, RightArrow, UpArrow } from "./styles/icons/SvgSprite";
+import { Line, RightArrow, UpArrow, Close } from "./styles/icons/SvgSprite";
 import Button from './components/Button';
 import Portal from './Portal';
 
@@ -15,7 +15,7 @@ export const ModalCV = ({
           <div className="modalOverlay">
            <div className={isOpen ? "modalWindow open" : "modalWindow"}>
               <div className="modalHeader">
-                <button name="times" onClick={onCancel}>x</button>
+              <button className="modalHeader__btn" name="times" onClick={onCancel}><Close /></button>
             
 
                 <div className="section__company_empty">

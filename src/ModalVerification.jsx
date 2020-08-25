@@ -1,5 +1,6 @@
 import React from 'react';
 import Portal from './Portal';
+import { Line, Close } from './styles/icons/SvgSprite';
 
 import './Modal.scss';
 

@@ -80,7 +80,7 @@ const CvUpload = () => {
             </div>
 
           <button className="btnPrimary" type="button">Continue<span className="btn__icon"><RightArrow /></span></button>
-          <p className="cv__finishLater">Finish later</p>
+          <button className="btnFinish">Finish later</button>
         
         </section>
       </div>
