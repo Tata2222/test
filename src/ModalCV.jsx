@@ -15,8 +15,13 @@ export const ModalCV = ({
           <div className="modalOverlay">
            <div className={isOpen ? "modalWindow open" : "modalWindow"}>
               <div className="modalHeader">
+<<<<<<< HEAD
                 
                 <button className="modalHeader__btn" name="times" onClick={onCancel}><Close /></button>
+=======
+              <button className="modalHeader__btn" name="times" onClick={onCancel}><Close /></button>
+            
+>>>>>>> b08861a6b11e69b6f96d7223407ff9a66e004c1d
 
                 <div className="section__company_empty">
                   <button className="points__label">200P&deg;</button>

@@ -1,6 +1,10 @@
 import React from 'react';
 import Portal from './Portal';
+<<<<<<< HEAD
 import { Line, Close, FillCheckCycle } from "./styles/icons/SvgSprite";
+=======
+import { Line, Close } from './styles/icons/SvgSprite';
+>>>>>>> b08861a6b11e69b6f96d7223407ff9a66e004c1d
 
 import './Modal.scss';
 

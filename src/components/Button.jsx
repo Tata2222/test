@@ -6,26 +6,16 @@ import classNames from 'classnames';
 const Button = ({
   children, onClick, className='', disabled=false, active="false", ...attrs
 }) => {
-  const onClickAction = e => {
-    if (disabled) {
-      e.preventDefault();
-    } else {
-      return onClick(e);
-    }
-  };
-
-
-  const Tag = attrs.href ? 'a' : 'button';
 
   return (
-    <Tag
+    <button
       className={classNames(className)}
       disabled={disabled}
-      onClick={onClickAction}
+      onClick={onClick}
       {...attrs}
     >
       {children}
-    </Tag>
+    </button>
   );
 };
 

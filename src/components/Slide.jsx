@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { RightArrow, FillCheckCycle } from "../styles/icons/SvgSprite";
-import Button from './Button';
+import { FillCheckCycle } from "../styles/icons/SvgSprite";
 
 
 export const Slide = ( {slide} ) => {
@@ -29,7 +28,7 @@ export const Slide = ( {slide} ) => {
         
         </section>
         </div>
-        <Button className="btnSlide"><RightArrow /></Button>
+       
  </div>
   )
 }

@@ -16,6 +16,9 @@
 @import "./parts/slide.scss";
 @import "./parts/videoclip.scss";
 @import "./parts/videorecord.scss";
+@import "./parts/login.scss";
+@import "./parts/email.scss";
+@import "./parts/cycleprogressbar.scss";
 
 
 .container {
@@ -38,6 +41,7 @@ box-sizing: border-box;
   margin-top: 40px;
 }
 
+.password__container,
 .info__container {
   display: flex;
   flex-direction: column;
@@ -47,9 +51,16 @@ box-sizing: border-box;
   padding: 0 25px;
 }
 
-.header {
-  &__container {
+.password__container {
+  margin-bottom: 35px;
+}
 
+.header {
+
+  &__btn {
+    position: absolute;
+    right: 25px;
+    z-index: 20;
   }
 
   .progress-bar {
@@ -63,13 +74,13 @@ box-sizing: border-box;
 
 .section {
   &__company {
-    margin: 0 0 20px;
+    margin: 14px 0 20px;
   }
 
   &__company_empty {
     position: relative;
     height: 30px;
-    margin-bottom: 20px;
+    margin: 14px 0 20px;
   }
 
   &__info {
@@ -96,7 +107,7 @@ box-sizing: border-box;
     font-size: 14px;
     font-weight: 800;
     letter-spacing: -0.5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   &__text {
@@ -106,7 +117,7 @@ box-sizing: border-box;
   }
 
   &__cv {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   &__application {
@@ -148,6 +159,18 @@ box-sizing: border-box;
 
   &__logo {
     padding: 70px 0 0 48px;
+    margin-bottom: 65px;
+  }
+
+
+  &__login {
+    width: 100%;
+    min-height: 70px;
+  }
+
+  &__email {
+    width: 100%;
+    margin: 70px auto 0;
   }
 }
 
@@ -160,7 +183,39 @@ box-sizing: border-box;
 .buttonPanel {
   display: flex;
   justify-content: center;
-
   margin-top: 30px;
   margin-bottom: 40px;
+}
+
+.buttonPanel__login {
+  display: flex;
+  justify-content: center;
+}
+
+.changeEmail,
+.changeNumber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    font-size: 12px;
+    font-weight: 500px;
+    color: var(--c-text-dark)
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--c-text-dark);
+    text-decoration: underline; 
+  }
+}
+
+.changeNumber {
+  margin-top: 40px;
+}
+
+.changeEmail {
+  margin-bottom: 85px;
 }

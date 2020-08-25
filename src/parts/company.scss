@@ -7,7 +7,25 @@
   }
 
   &__proposition_default {
+    position: relative;
     background-color: var(--base-dark);
+  }
+
+  &__btn {
+    position: absolute;
+    right: 25px;
+    z-index: 20;
+  
+    svg {
+     /* fill: var(--c-text-dark);*/
+      transition: all 0.25 ease-in;
+    }
+  
+    &:hover {
+      svg {
+        fill: var(--c-light-element);
+      }
+    }
   }
 
   &__vacancy {
@@ -33,6 +51,17 @@
     left: 0;
     bottom: 0;
     right: 0;
+
+    &Summary {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    transform: translateY(-35%);
+    left: 0;
+    bottom: 0;
+    right: 0;
+   }
   }   
 }
 
@@ -51,5 +80,3 @@
   color: var(--base-white);
   border-radius: 0 0 8px 8px;
 }
-
-

@@ -25,6 +25,7 @@
   &__input_sm,
   &__input_code,
   &__input_phone,
+  &__input_error,
   &__input {
     border: 0;
     background-color: var(--c-secondary);
@@ -39,6 +40,24 @@
       font-size: 14px;
       color: var(--c-text-light);
     }
+  }
+
+  &__input_error {
+   /* position: relative;
+    background-image: url(../public/images/alert-cycle.svg);
+    background-repeat: no-repeat;
+    background-position: 95%;*/
+
+    &::placeholder {
+      color: var(--c-error);
+    }
+  }
+
+  &__input_errorMessage {
+    color: var(--c-error);
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 10px;
   }
 
   &__input_sm {
@@ -168,4 +187,108 @@
     color: var(--c-text-light);
     margin: 0 0 30px 10px;
   }
+}
+
+.dropdown__wrapper {
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 17px;
+  background-color: var(--c-secondary);
+  border-radius: var(--border-radius);
+  line-height: 26px;
+  border: none;
+}
+
+.dropdown__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--c-text-light); 
+  background-color: var(--c-secondary);
+  cursor: pointer;
+  border: none;
+}
+
+.dropdown__options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: none;
+  border-top: 0;
+  background-color: var(--c-secondary);
+  transition: all 0.3s ease-in;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.dropdown.open .dropdown__options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.dropdown__option {
+  position: relative;
+  display: block;
+  padding: 10px 17px;
+  font-size: 14px;
+  color: var(--c-text-light); 
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.dropdown__option:hover {
+  cursor: pointer;
+  background-color: #b2b2b2;
+}
+
+.dropdown__option.selected {
+  background-color: var(--c-text-light);
+  color: #fff;
+}
+
+.arrow {
+  position: relative;
+  height: 8px;
+  width: 8px;
+}
+
+.arrow::before, .arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 1px;
+  height: 100%;
+  transition: all 0.5s;
+}
+.arrow::before {
+  left: 0;
+  transform: rotate(45deg);
+  background-color: #a5a5a5;
+}
+.arrow::after {
+  left: 5px;
+  transform: rotate(-45deg);
+  background-color: #a5a5a5;
+}
+.open .arrow::before {
+  left: 0;
+  transform: rotate(-45deg);
+}
+.open .arrow::after {
+  left: 5px;
+  transform: rotate(45deg);
 }

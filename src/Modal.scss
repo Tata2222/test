@@ -80,7 +80,6 @@ $border-radius: 8px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  /*padding-bottom: 40px;*/
   overflow: hidden;
 }
 
@@ -126,7 +125,7 @@ $border-radius: 8px;
   z-index: 20;
 
   svg {
-    fill: var(--c-text-dark);
+   /* fill: var(--c-text-dark);*/
     transition: all 0.25 ease-in;
   }
 
@@ -181,7 +180,7 @@ $border-radius: 8px;
 .modalCheckBox {
   margin-bottom: 5px;
 
-  input[type="checkbox"] {
+  input[type="range"] {
     display: none;
   }
 
@@ -384,26 +383,6 @@ $border-radius: 8px;
   }
 }
 
-.changeNumber {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
-
-  &__text {
-    font-size: 12px;
-    font-weight: 500px;
-    color: var(--c-text-dark)
-  }
-
-  &__link {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--c-text-dark);
-    text-decoration: underline; 
-  }
-}
-  
 .imgContainer_sm,
 .imgContainer {
   position: relative;

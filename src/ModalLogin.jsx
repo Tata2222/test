@@ -1,7 +1,11 @@
 import React from 'react';
 import Portal from './Portal';
 import Button from './components/Button';
+<<<<<<< HEAD
 import { FillCheckCycle, RightArrow, Close, Line, Eye } from "./styles/icons/SvgSprite";
+=======
+import { FillCheckCycle, RightArrow, Line, Close} from "./styles/icons/SvgSprite";
+>>>>>>> b08861a6b11e69b6f96d7223407ff9a66e004c1d
 
 import './Modal.scss';
 
@@ -38,12 +42,21 @@ export const ModalLogin = ({
                 </div>
 
                 <section className="password">
+<<<<<<< HEAD
                   <div className="form__inputWrapper">
                     <input className="password__input" type="password" name="password" placeholder="*******" required></input>
                     <span className="form__inputIcon" ><Eye /></span>
                   </div>
                     <p className="password__approval">Nice! Your password is strong & super secure</p>
                 
+=======
+                <div className="form__inputWrapper">
+                  <input className="password__input" type="password" name="password" placeholder="*******" required></input>
+                  <span className="form__inputIcon" />
+                </div>
+
+                  <p className="password__approval">Nice! Your password is strong & super secure</p>
+>>>>>>> b08861a6b11e69b6f96d7223407ff9a66e004c1d
                 </section>
 
                 <section  className="advantage">
@@ -56,7 +69,6 @@ export const ModalLogin = ({
                   </div>
                 </section>
             
-
               </div>
               <div className="modalFooter">
                 <button className="btnPrimary" type="button">Finish<span className="btn__icon"><RightArrow /></span></button>

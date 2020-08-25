@@ -4,7 +4,7 @@ import { Line, RightArrow, UpArrow } from "../styles/icons/SvgSprite";
 const CV = () => {
   return (
     <>
-     <div className="section__company_empty">
+      <div className="section__company_empty">
         <button className="points__label">200P&deg;</button>
       </div>
 
@@ -38,7 +38,7 @@ const CV = () => {
           </div>
 
           <div className="cv__whatsApp">
-            <button className="btnWhatsApp"><span>Through <span className="whatsApp__logo">whatsApp</span> sending CV</span><span className="btn__icon"><RightArrow /></span></button>
+            <button className="btnWhatsApp"><span>Through <span className="whatsApp__logo"><img src='./images/whatsApp.svg' alt='img_logo' /><br /></span> sending CV</span><span className="btn__icon"><RightArrow /></span></button>
           </div>
 
           <p className="cv__error">
@@ -48,7 +48,7 @@ const CV = () => {
             
           <button className="btnSecondary" type="button">Continue<span className="btn__icon"><RightArrow /></span></button>
 
-          <p className="cv__finishLater">Finish later</p>
+          <button className="btnFinish">Finish later</button>
         
         </section>
       </div>

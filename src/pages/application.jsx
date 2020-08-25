@@ -6,7 +6,7 @@ import { FillCheckCycle, Check, RightArrow } from "../styles/icons/SvgSprite";
 const Application = () => {
   return (
     <>
-     <div className="section__company_empty">
+      <div className="section__company_empty">
         <button className="points__label">200P&deg;</button>
       </div>
 
@@ -47,7 +47,7 @@ const Application = () => {
           </div>
             
           <button className="btnPrimary" type="button">Send<span className="btn__icon"><RightArrow /></span></button>
-          <p className="cv__finishLater">Finish later</p>
+          <button className="btnFinish">Finish later</button>
         </section>
       </div>
     </>

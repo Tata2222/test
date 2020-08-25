@@ -5,16 +5,19 @@ const Summary = () => {
   return (
     <>
       <div className="section__quality">
+        <div className="section__title_sm">Quality of you application</div>
         <div className="modalCheckBox">
-          <input type="checkbox" id="checker"/>
+          <input type="range" id="checker"/>
           <label for="checker"></label>
-        </div>
+       
+        
         <p className="modalNote">Average other applications: 500Pº</p>
+        </div>
       </div>
       
       <div className="section__company">
         <div className="company__imgWrapper">
-          <img className="company__img" src="./images/mountain_woman.jpg" alt="company_image" />
+          <img className="company__imgSummary" src="./images/mountain_woman.jpg" alt="company_image" />
         </div>
       </div>
 
@@ -65,7 +68,7 @@ const Summary = () => {
           </p>    
             
           <button className="btnPrimary" type="button">Okay<span className="btn__icon"><RightArrow /></span></button>
-          <p className="cv__finishLater">Finish later</p>
+          <button className="btnFinish">Finish later</button>
         </section>
       </div>
     </>

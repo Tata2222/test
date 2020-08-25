@@ -33,9 +33,17 @@ const CvUpload = () => {
 
         <section  className="cv__donut">
           <div className="cv__picture">
-              <button className="btnAttachment"><UpArrow /></button>
-              <p className="cv__pictureText">Add CV & Attachments</p>
-              <p className="cv__pictureFormat">as picture, .pdf, .docx or .odt</p>
+            <div className="progress" data-value='50'>
+              <span className="progress_left">
+                <span className="progress__bar border-danger"></span>
+              </span>
+              <span className="progress_right">
+                  <span className="progress__bar border-danger"></span>
+              </span>
+              <div className="progress__value rounded-circle">
+                <div className="progress__valueText">50<sup className="small">%</sup></div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -80,7 +88,7 @@ const CvUpload = () => {
             </div>
 
           <button className="btnPrimary" type="button">Continue<span className="btn__icon"><RightArrow /></span></button>
-          <p className="cv__finishLater">Finish later</p>
+          <button className="btnFinish">Finish later</button>
         
         </section>
       </div>

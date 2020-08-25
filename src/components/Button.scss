@@ -420,3 +420,39 @@
     fill: var(--c-light-element);
   }
 }
+
+.btnFinish {
+  position: relative;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--bg-point-list);
+  cursor: pointer;
+  margin: 15px auto 0;
+
+  &:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transition: all 0.3s ease-in;
+    background-color: var(--bg-point-list);
+  }
+
+  &:hover {
+    .btnFinish:after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      background-color: var(--bg-point-list);
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

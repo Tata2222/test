@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FillCheckCycle, RightArrow } from "../styles/icons/SvgSprite";
 import Button from '../components/Button';
 
-const Chanel = () => {
+const Channel = () => {
   const [isblockAppShow, setBlockAppShow] = useState(false);
   
 return(
@@ -39,7 +39,7 @@ return(
           <section className="section__appSupport">
             <div className="blockAppWrapper">
               <Button type="submit" className="btnWhatsApp"  onClick={() => setBlockAppShow(!isblockAppShow)}>
-                Btn
+                <img src="./images/whatsApp.svg" alt="telegram" />
                 <span className="btn__icon"><RightArrow /></span>
               </Button>
 
@@ -71,7 +71,7 @@ return(
             </div>
             <div className="blockAppWrapper">
               <Button type="submit" className="btnTelegram" onClick={() => setBlockAppShow(!isblockAppShow)}>
-                Btn
+                <img src="./images/telegram.svg" alt="telegram" />
                 <span className="btn__icon"><RightArrow /></span>
               </Button>
 
@@ -88,21 +88,21 @@ return(
             </div>
             <div className="blockAppWrapper">
               <Button type="submit" className="btnSms" onClick={() => setBlockAppShow(!isblockAppShow)}>
-                Btn
+                <img src="./images/sms.svg" alt="sms" />
                 <span className="btn__icon"><RightArrow /></span>
               </Button>
               {/*isblockAppShow && <div className="block_WhatsApp"></div>*/}
             </div>
             <div className="blockAppWrapper">
               <Button type="submit" className="btnDiscard" onClick={() => setBlockAppShow(!isblockAppShow)}>
-                Btn
+                <img src="./images/discard.svg" alt="discard" />
                 <span className="btn__icon"><RightArrow /></span>
               </Button>
               {/*isblockAppShow && <div className="block_WhatsApp"></div>*/}
             </div>
             <div className="blockAppWrapper">
               <Button type="submit" className="btnEmail" onClick={() => setBlockAppShow(!isblockAppShow)}>
-                Btn
+                <img src="./images/email.svg" alt="email" />
                 <span className="btn__icon"><RightArrow /></span>
               </Button>
               {/*isblockAppShow && <div className="block_WhatsApp"></div>*/}
@@ -114,4 +114,4 @@ return(
   );
 };
 
-export default Chanel;
+export default Channel;

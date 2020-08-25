@@ -1,0 +1,29 @@
+.login {
+
+  &__password {
+    text-align: end;
+    margin: -4px 0 35px;
+  }
+
+  &__register {
+    font-size: 12px;
+    color: var(--c-text-light);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--c-text-light);
+  }
+
+  &__separation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: var(--c-light-element);
+    margin: 18px auto;  
+  }
+}
