@@ -181,8 +181,10 @@
     color: var(--bg-whatsapp-btn);
     background-color: var(--base-white);
 
+
     svg {
       fill: var(--bg-whatsapp-btn);
+      filter: drop-shadow(0 0 40px #969696);
     }
   }
 }

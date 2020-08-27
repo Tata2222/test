@@ -1,0 +1,67 @@
+.btnLivechat,
+.btnWhatsAppRound,
+.btnTelephone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: green;
+  cursor: pointer;
+  transition: all 0.25 ease-in;
+
+  svg {
+    transition: all 0.25 ease-in;
+   }
+
+  &:hover {
+    span {
+      animation: shake 0.5s infinite;
+      transform-origin: center;
+    }
+
+    svg {
+     transform: scale(1.1);
+    }
+  }
+}
+
+
+.btnTelephone {
+  background: var(--baze-white);
+  border: 1px solid  var(--c-google-btn);
+}
+
+.btnWhatsAppRound {
+  background: var(--c-success);
+  border: 1px solid  var(--c-success);
+}
+
+.btnLivechat {
+  background: var(--c-facebook-btn);
+  border: 1px solid  var(--c-facebook-btn);
+}
+
+.btnChevron {
+  display: flex;
+  justify-content: center;
+  margin: 65px auto;
+
+  svg {
+    fill: var(--c-light-element);
+  }
+}
+
+
+@keyframes shake {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+      transform: rotate(-10deg);
+  }
+  20%, 40% {
+      transform: rotate(10deg);
+  }
+}

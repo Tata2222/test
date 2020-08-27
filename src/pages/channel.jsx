@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FillCheckCycle, RightArrow } from "../styles/icons/SvgSprite";
+import { FillCheckCycle, RightArrow, WhatsApp } from "../styles/icons/SvgSprite";
 import Button from '../components/Button';
 
 const Channel = () => {
@@ -39,7 +39,7 @@ return(
           <section className="section__appSupport">
             <div className="blockAppWrapper">
               <Button type="submit" className="btnWhatsApp"  onClick={() => setBlockAppShow(!isblockAppShow)}>
-                <img src="./images/whatsApp.svg" alt="telegram" />
+                <WhatsApp />
                 <span className="btn__icon"><RightArrow /></span>
               </Button>
 
