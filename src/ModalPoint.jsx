@@ -1,6 +1,6 @@
 import React from 'react';
 import Portal from './Portal';
-import { FillCheckCycle, Check, RightArrow } from "./styles/icons/SvgSprite";
+import { FillCheckCycle, Check, RightArrow, Close } from "./styles/icons/SvgSprite";
 
 import './Modal.scss';
 
@@ -15,8 +15,8 @@ export const ModalPoint = ({
           <div className="modalOverlay">
             <div className={isOpen ? "modalWindow open" : "modalWindow"}>
               <div className="modalHeader">
-                <button name="times" onClick={onCancel}>x</button>
-
+              <button className="modalHeader__btn" name="times" onClick={onCancel}><Close /></button>   
+                <div className="gap"></div>
                 <section className="section__text">
                   <div className="text__wrapper_left">
                     <p className="text_primary_lg">Collect points & <br /> reward yourself!</p>
@@ -28,11 +28,20 @@ export const ModalPoint = ({
                   </div>
                 </section>
                
-                <div className="modalCheckBox">
+                <div className="modalProgressBar">
+                  <div className="modalProgressBar__wrapper">
+                    <progress id="progressBar" max="1500" value="900" />
+                    <span className="modalProgressBar__text">1500Pº</span>
+                  </div>
+                  <p className="modalNote">Average other applications: 500Pº</p>
+                </div>
+                <div className="gap"></div>
+
+                {/*<div className="modalCheckBox">
                  <input type="checkbox" id="checker"/>
                  <label for="checker"></label>
                 </div>
-                <p className="modalNote">Average other applications: 500Pº</p>
+      <p className="modalNote">Average other applications: 500Pº</p>*/}
               </div>
               <div className="modalBody">
 
