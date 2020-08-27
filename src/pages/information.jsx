@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {ModalChannel} from '../ModalChannel';
 
 import { FillCheckCycle, Check, RightArrow, Line, ChevronDown } from "../styles/icons/SvgSprite";
 
@@ -126,6 +127,7 @@ const Information = () => {
         </form> 
       </section>
     </div>
+    <ModalChannel  isOpen={isModalOpen}></ModalChannel>
   </>
   )
 }

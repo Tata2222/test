@@ -43,10 +43,6 @@
   }
 
   &__input_error {
-   /* position: relative;
-    background-image: url(../public/images/alert-cycle.svg);
-    background-repeat: no-repeat;
-    background-position: 95%;*/
 
     &::placeholder {
       color: var(--c-error);
@@ -66,7 +62,7 @@
   }
 
   &__input_code {
-    width: 30%;
+    width: 40%;
     border-radius: 8px 0 0 8px;
   }
 

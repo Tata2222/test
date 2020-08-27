@@ -14,6 +14,7 @@
     color: var(--c-text-light);
     transition: all 0.3s ease;
     margin: auto;
+
     svg {
       color: var(--c-icon-secondary);
     }
@@ -117,131 +118,6 @@
 
     svg {
       fill: var(--c-primary)
-    }
-  }
-}
-
-.btnRemind {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--c-secondary);
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: var(--border-radius);
-  border: 1px solid  var(--c-secondary);
-  padding: 0.8em 1em;
-  cursor: pointer;
-  width: 200px;
-  height: 50px;
-  color: var(--c-text-dark);
-  transition: all 0.3s ease;
-  margin: 10px auto 20px;
-  
-  svg {
-    fill: var(--c-text-dark);
-  }
-
-  &:active,
-  &:hover {
-    color: var(--c-text-light);
-
-    svg {
-      fill: var(--c-text-light);
-    }
-  }
-
-}
-
-.btnSms,
-.btnTelegram,
-.btnWhatsApp,
-.btnDiscard,
-.btnEmail {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--bg-whatsapp-btn);
-  font-size: 18px;
-  border-radius: var(--border-radius);
-  border: 1px solid  var(--bg-whatsapp-btn);
-  padding: 0.8em 1em;
-  cursor: pointer;
-  width: 100%;
-  height: 60px;
-  color: var(--base-white);
-  transition: all 0.3s ease;
-  
-  svg {
-    fill: var(--base-white);
-  }
-
-
-  &:hover {
-    color: var(--bg-whatsapp-btn);
-    background-color: var(--base-white);
-
-
-    svg {
-      fill: var(--bg-whatsapp-btn);
-      filter: drop-shadow(0 0 40px #969696);
-    }
-  }
-}
-
-.btnTelegram {
-  background: var(--c-telegram-btn);
-  border: 1px solid var(--c-telegram-btn);
-
-  &:hover {
-    background: var(--base-white);
-    color: var(--c-telegram-btn);
-
-    svg {
-      fill: var(--c-telegram-btn);
-    }
-  }
-}
-
-.btnSms {
-  background: var(--c-sms-btn);
-  border: 1px solid var(--c-sms-btn);
-
-
-  &:hover {
-    background: var(--base-white);
-    color: var(--c-sms-btn);
-
-    svg {
-      fill: var(--c-sms-btn);
-    }
-  }
-}
-
-.btnDiscard {
-  background: var(--c-discard-btn);
-  border: 1px solid var(--c-discard-btn);
-
-  &:hover {
-    background: var(--base-white);
-    color: var(--c-discard-btn);
-
-    svg {
-      fill: var(--c-discard-btn);
-    }
-  }
-}
-
-.btnEmail {
-  background: var(--c-email-btn);
-  border: 1px solid var(--c-email-btn);
-
-  &:hover {
-    background: var(--base-white);
-    color: var(--c-email-btn);
-
-    svg {
-      fill: var(--c-email-btn);
     }
   }
 }
@@ -453,5 +329,226 @@
       bottom: 0;
       left: 0;
     }
+  }
+}
+
+
+
+.btnRemind {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--c-secondary);
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: var(--border-radius);
+  border: 1px solid  var(--c-secondary);
+  padding: 0.8em 1em;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  color: var(--c-text-dark);
+  transition: all 0.3s ease;
+  margin: 10px auto 20px;
+  
+  svg {
+    fill: var(--c-text-dark);
+  }
+
+  &:active,
+  &:hover {
+    color: var(--c-text-light);
+
+    svg {
+      fill: var(--c-text-light);
+    }
+  }
+
+}
+
+.btnSms,
+.btnTelegram,
+.btnWhatsApp,
+.btnDiscard,
+.btnEmail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-whatsapp-btn);
+
+  font-size: 18px;
+  border-radius: var(--border-radius);
+  border: 1px solid  var(--bg-whatsapp-btn);
+  padding: 0.8em 1em;
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  color: var(--base-white);
+  transition: all 0.3s ease;
+
+  span {
+    transition: all 0.3s ease;
+  }
+  
+  svg {
+    fill: var(--base-white);
+  }
+
+
+  &:hover {
+   /* color: var(--bg-whatsapp-btn);*/
+    background-color: transparent;
+
+    span {
+      animation: swing 0.8s infinite;
+    }
+  }
+}
+
+
+.btnTelegram {
+  background: var(--c-telegram-btn);
+  border: 1px solid var(--c-telegram-btn);
+
+  &:hover {
+    background: transparent;
+    color: var(--c-telegram-btn);
+  }
+}
+
+.btnSms {
+  background: var(--c-sms-btn);
+  border: 1px solid var(--c-sms-btn);
+
+  &:hover {
+    background: transparent;
+    color: var(--c-sms-btn);
+  }
+}
+
+.btnDiscard {
+  background: var(--c-discard-btn);
+  border: 1px solid var(--c-discard-btn);
+
+  &:hover {
+    background: transparent;
+    color: var(--c-discard-btn);
+  }
+}
+
+.btnEmail {
+  background: var(--c-email-btn);
+  border: 1px solid var(--c-email-btn);
+
+  &:hover {
+    background: transparent;
+    color: var(--c-email-btn);
+  }
+}
+
+
+.blockAccept_Telegram.open > .btnTelegram > span {
+  transform: rotate(180deg);
+}
+
+.blockAccept_Sms.open > .btnSms > span {
+  transform: rotate(180deg);
+}
+
+.blockAccept_Discard.open > .btnDiscard > span {
+  transform: rotate(180deg);
+}
+
+.blockAccept_WhatsApp.open > .btnWhatsApp > span {
+  transform: rotate(180deg);
+}
+
+.blockAccept_Email.open > .btnEmail > span {
+  transform: rotate(180deg);
+}
+
+
+
+.blockAccept_Telegram.open > .btnTelegram:hover > span {
+  animation: reverse-swing 0.8s infinite;
+ }
+
+ .blockAccept_Sms.open > .btnSms:hover > span {
+  animation: reverse-swing 0.8s infinite;
+}
+
+.blockAccept_Discard.open > .btnDiscard:hover > span {
+  animation: reverse-swing 0.8s infinite;
+}
+
+.blockAccept_WhatsApp.open > .btnWhatsApp:hover > span {
+  animation: reverse-swing 0.8s infinite;
+}
+
+.blockAccept_Email.open > .btnEmail:hover > span {
+  animation: reverse-swing 0.8s infinite;
+}
+
+
+.block_Telegram.open > .btnTelegram > span {
+  transform: rotate(180deg);
+}
+
+.block_Sms.open > .btnSms > span {
+  transform: rotate(180deg);
+}
+
+.block_Discard.open > .btnDiscard > span {
+  transform: rotate(180deg);
+}
+
+.block_WhatsApp.open > .btnWhatsApp > span {
+  transform: rotate(180deg);
+}
+
+.block_Email.open > .btnEmail > span {
+  transform: rotate(180deg);
+}
+
+
+
+.block_Telegram.open > .btnTelegram:hover > span {
+  animation: reverse-swing 0.8s infinite;
+}
+
+.block_Sms.open > .btnSms:hover > span {
+  animation: reverse-swing 0.8s infinite;
+}
+
+.block_Discard.open > .btnDiscard:hover > span {
+  animation: reverse-swing 0.8s infinite;
+}
+
+.block_WhatsApp.open > .btnWhatsApp:hover > span {
+  animation: reverse-swing 0.8s infinite;
+}
+
+.block_Email.open > .btnEmail:hover > span {
+  animation: reverse-swing 0.8s infinite;
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: translateX(0%);
+  }
+  50% {
+      transform: translateX(-20%);
+  }
+}
+
+@keyframes reverse-swing {
+ 
+  0%, 100% {
+  
+    transform: translateX(0%) rotate(180deg);
+  }
+  50% {
+  
+    transform: translateX(-20%) rotate(180deg);;
   }
 }
