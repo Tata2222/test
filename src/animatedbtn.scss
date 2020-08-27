@@ -65,3 +65,16 @@
       transform: rotate(10deg);
   }
 }
+
+
+.inputWrapper {
+  /* position: relative;
+   margin-bottom: 14px;*/
+   position: relative;
+   border: 0;
+   background-color: var(--c-secondary);
+   padding: 10px 17px;
+   border-radius: 8px;
+   width: 100%;
+   line-height: 26px;
+}
